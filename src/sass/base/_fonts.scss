@@ -6,9 +6,11 @@ h1 {
   line-height: 42px;
 }
 h2 {
-  font-family: "PalatinoLT-Roman";
+  font-family: "PalatinoLT-Light";
   color: $black;
   text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
 }
 h3 {
   font-family: "PalatinoLT-Light";
@@ -19,6 +21,12 @@ h3 {
 h4 {
   font-family: "PalatinoLT-Roman";
   color: $theme-secondary;
+}
+.body {
+  font-family: "PalatinoLT-Light";
+  color: $theme-primary;
+  font-size: 18px;
+  text-align: center;
 }
 
 .caption {
