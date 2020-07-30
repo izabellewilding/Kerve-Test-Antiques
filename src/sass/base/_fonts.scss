@@ -1,29 +1,29 @@
-.Swiss721BT-Thin {
-  font-family: Swiss721BT-Thin;
+h1 {
+  font-family: "PalatinoLT-Light";
+  text-transform: uppercase;
+  color: $white;
 }
-.PalatinoLT-Light {
-  font-family: PalatinoLT-Light;
+h2 {
+  font-family: "PalatinoLT-Roman";
+  color: $black;
+  text-transform: uppercase;
 }
-.PalatinoLT-Roman {
-  font-family: PalatinoLT-Roman;
+h3 {
+  font-family: "PalatinoLT-Light";
+  color: $white;
 }
-.AvenirLTStd-Heavy {
-  font-family: AvenirLTStd-Heavy;
-}
-.AvenirLTStd-Medium {
-  font-family: AvenirLTStd-Medium;
-}
-.AvenirLTStd-Book {
-  font-family: AvenirLTStd-Book;
+h4 {
+  font-family: "PalatinoLT-Roman";
+  color: $theme-secondary;
 }
 
-// .hero-title-lg {
-//   font-size: 75.43px;
-//   font-family: PalatinoLT-Light;
-//   color: $white;
-// }
-// .hero-title-sm {
-//   font-size: 51.56px;
-//   font-family: PalatinoLT-Light;
-//   color: $white;
-// }
+.caption {
+  font-family: "Swiss721BT-Thin";
+  color: $theme-secondary;
+  font-weight: bold;
+
+  &-number {
+    font-family: "AvenirLTStd-Book";
+    color: $white;
+  }
+}
