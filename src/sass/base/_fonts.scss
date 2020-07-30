@@ -2,6 +2,8 @@ h1 {
   font-family: "PalatinoLT-Light";
   text-transform: uppercase;
   color: $white;
+  font-size: 43px;
+  line-height: 42px;
 }
 h2 {
   font-family: "PalatinoLT-Roman";
@@ -11,6 +13,8 @@ h2 {
 h3 {
   font-family: "PalatinoLT-Light";
   color: $white;
+  font-size: 27px;
+  line-height: 25px;
 }
 h4 {
   font-family: "PalatinoLT-Roman";
@@ -18,12 +22,27 @@ h4 {
 }
 
 .caption {
-  font-family: "Swiss721BT-Thin";
+  font-family: "AvenirLTStd-Book";
   color: $theme-secondary;
   font-weight: bold;
+  font-size: 13px;
+  padding: 28px 1px 10px 10px;
+  text-align: initial;
+  line-height: 20px;
 
   &-number {
+    @include centered;
     font-family: "AvenirLTStd-Book";
     color: $white;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 2px;
+  }
+
+  &-slash {
+    font-family: "Swiss721BT-Thin";
+    color: $white;
+    font-size: 24px;
+    padding: 10px;
   }
 }

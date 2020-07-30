@@ -2,4 +2,12 @@
   background-color: $black;
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+}
+
+.fixed-adjust {
+  padding-top: 54px;
+  height: 54px;
+  grid-column: span 6;
 }

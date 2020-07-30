@@ -4,7 +4,25 @@
   background-size: cover;
   height: 100vh;
 
+  @include grid(mobile);
+  grid-template-rows: 54px auto 131px;
+
   @include media(desktop) {
     background-image: url(../assets/images/desktop_hero.jpg);
+  }
+
+  &-title {
+    grid-column: 2/4;
+    padding-top: 29px;
+  }
+
+  &-footer {
+    grid-column: 2/6;
+    @include centered;
+    flex-direction: column;
+
+    .arrow {
+      width: 40px;
+    }
   }
 }

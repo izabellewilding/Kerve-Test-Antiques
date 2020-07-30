@@ -11,3 +11,15 @@
     }
   }
 }
+
+@mixin grid($breakpoint) {
+  @if $breakpoint==mobile {
+    display: grid;
+    grid-template-columns: 32px 1fr 1fr 1fr 1fr 32px;
+  }
+}
+@mixin centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
