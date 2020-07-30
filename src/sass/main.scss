@@ -1,5 +1,7 @@
-@import "fonts";
-@import "mixins";
-@import "variables";
-@import "components";
-@import "reset";
+@import "../sass/abstracts/variables";
+@import "../sass/abstracts/mixins";
+@import "../sass/base/reset";
+@import "../sass/components/hamburger";
+@import "../sass/components/header";
+@import "../sass/components/hero";
+@import "../sass/base/fonts";
