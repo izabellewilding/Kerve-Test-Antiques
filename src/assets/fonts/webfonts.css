@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Swiss721BT-Thin";
+  src: url("./webfonts/2EA710_0_0.eot");
+  src: url("./webfonts/2EA710_0_0.eot?#iefix") format("embedded-opentype"),
+    url("./webfonts/2EA710_0_0.woff2") format("woff2"),
+    url("./webfonts/2EA710_0_0.woff") format("woff"),
+    url("./webfonts/2EA710_0_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PalatinoLT-Light";
+  src: url("./webfonts/2EA710_1_0.eot");
+  src: url("./webfonts/2EA710_1_0.eot?#iefix") format("embedded-opentype"),
+    url("./webfonts/2EA710_1_0.woff2") format("woff2"),
+    url("./webfonts/2EA710_1_0.woff") format("woff"),
+    url("./webfonts/2EA710_1_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PalatinoLT-Roman";
+  src: url("./webfonts/2EA710_2_0.eot");
+  src: url("./webfonts/2EA710_2_0.eot?#iefix") format("embedded-opentype"),
+    url("./webfonts/2EA710_2_0.woff2") format("woff2"),
+    url("./webfonts/2EA710_2_0.woff") format("woff"),
+    url("./webfonts/2EA710_2_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Heavy";
+  src: url("./webfonts/2EA710_3_0.eot");
+  src: url("./webfonts/2EA710_3_0.eot?#iefix") format("embedded-opentype"),
+    url("./webfonts/2EA710_3_0.woff2") format("woff2"),
+    url("./webfonts/2EA710_3_0.woff") format("woff"),
+    url("./webfonts/2EA710_3_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Medium";
+  src: url("./webfonts/2EA710_4_0.eot");
+  src: url("./webfonts/2EA710_4_0.eot?#iefix") format("embedded-opentype"),
+    url("./webfonts/2EA710_4_0.woff2") format("woff2"),
+    url("./webfonts/2EA710_4_0.woff") format("woff"),
+    url("./webfonts/2EA710_4_0.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirLTStd-Book";
+  src: url("./webfonts/2EA710_5_0.eot");
+  src: url("./webfonts/2EA710_5_0.eot?#iefix") format("embedded-opentype"),
+    url("./webfonts/2EA710_5_0.woff2") format("woff2"),
+    url("./webfonts/2EA710_5_0.woff") format("woff"),
+    url("./webfonts/2EA710_5_0.ttf") format("truetype");
+}
