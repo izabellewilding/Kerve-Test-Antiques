@@ -18,39 +18,13 @@ h3 {
   font-size: 27px;
   line-height: 25px;
 }
-h4 {
-  font-family: "PalatinoLT-Roman";
-  color: $theme-secondary;
-}
+// h4 {
+//   font-family: "PalatinoLT-Roman";
+//   color: $theme-secondary;
+// }
 .body {
   font-family: "PalatinoLT-Light";
-  color: $theme-primary;
-  font-size: 18px;
+  color: $grey-1;
+  font-size: 20px;
   text-align: center;
-}
-
-.caption {
-  font-family: "AvenirLTStd-Book";
-  color: $theme-secondary;
-  font-weight: bold;
-  font-size: 13px;
-  padding: 28px 1px 10px 10px;
-  text-align: initial;
-  line-height: 20px;
-
-  &-number {
-    @include centered;
-    font-family: "AvenirLTStd-Book";
-    color: $white;
-    font-size: 12px;
-    padding: 10px;
-    letter-spacing: 2px;
-  }
-
-  &-slash {
-    font-family: "Swiss721BT-Thin";
-    color: $white;
-    font-size: 24px;
-    padding: 10px;
-  }
 }

@@ -1,18 +1,48 @@
 .about {
   @include centered;
   @include grid(mobile);
+
+  background-color: $white;
   &-title {
     grid-column: 2/6;
     max-width: 70%;
     text-align: center;
     margin: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.5em;
+      border-bottom: 0.5px solid #988468;
+      width: 37%;
+      margin: auto;
+    }
   }
   &-description {
     grid-column: 2/6;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    margin: auto;
   }
   &-appreciation {
     grid-column: 1/7;
+  }
+  .product-caption {
+    @include productCaption;
+    color: $grey-3;
+    padding-bottom: 80px;
+    .caption {
+      &-number {
+        color: $gold;
+      }
+      &-slash {
+        color: $gold;
+      }
+    }
   }
 }

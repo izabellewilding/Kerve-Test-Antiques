@@ -18,8 +18,44 @@
     grid-template-columns: 32px 1fr 1fr 1fr 1fr 32px;
   }
 }
+
 @mixin centered {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin productCaption {
+  @include centered;
+  flex-direction: row;
+  grid-column: 2/6;
+  width: 92%;
+  margin: auto;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  .caption {
+    font-family: "AvenirLTStd-Book";
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    color: $grey-1;
+    padding-top: 19px;
+
+    &-number {
+      @include centered;
+      font-family: "AvenirLTStd-Book";
+      font-size: 12px;
+      padding: 10px;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    &-slash {
+      font-family: "Swiss721BT-Thin";
+      font-size: 24px;
+      padding: 10px;
+      font-weight: bold;
+    }
+  }
 }

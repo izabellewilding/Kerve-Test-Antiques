@@ -5,7 +5,7 @@
   height: 100vh;
 
   @include grid(mobile);
-  grid-template-rows: 54px auto 131px;
+  grid-template-rows: 54px auto 151px;
 
   @include media(desktop) {
     background-image: url(../assets/images/desktop_hero.jpg);
@@ -23,6 +23,19 @@
 
     .arrow {
       width: 40px;
+    }
+  }
+}
+
+.product-caption {
+  @include productCaption;
+  .caption {
+    color: $grey-3;
+    &-number {
+      color: $white;
+    }
+    &-slash {
+      color: $white;
     }
   }
 }
