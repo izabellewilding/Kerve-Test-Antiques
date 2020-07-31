@@ -1,6 +1,8 @@
 .events {
   background-color: $white;
   padding-top: 80px;
+  padding-bottom: 80px;
+
   @include grid(mobile);
 
   .events-title-container {
@@ -12,7 +14,28 @@
   }
 
   .event-item {
-    grid-column: 2/6;
-    padding-top: 40px;
+    @include eventItem;
+    text-align: center;
+
+    @include media(desktop) {
+      text-align: start;
+    }
+    .event-body {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      line-height: 30px;
+    }
+    .event-button {
+      border: solid 2px $gold;
+      color: $gold;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 12px 40px 12px 40px;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: auto;
+    }
   }
 }

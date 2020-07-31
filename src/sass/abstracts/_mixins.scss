@@ -1,4 +1,9 @@
 @mixin media($breakpoint) {
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 480px) {
+      @content;
+    }
+  }
   @if $breakpoint==tablet {
     @media only screen and (min-width: 480px) {
       @content;
@@ -77,4 +82,18 @@
     width: 37%;
     margin: auto;
   }
+}
+
+@mixin eventItem {
+  grid-column: 2/6;
+  padding-top: 40px;
+}
+
+@mixin scalingSvgContainer {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  width: 26px;
+  height: 24px;
 }

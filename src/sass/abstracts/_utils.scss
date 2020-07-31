@@ -6,3 +6,16 @@
 .grey-4 {
   color: $grey-4;
 }
+
+.hidden-mobile {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
+}
+.hidden-desktop {
+  display: block;
+  @include media(tablet) {
+    display: none;
+  }
+}
