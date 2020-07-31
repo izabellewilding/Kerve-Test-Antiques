@@ -4,25 +4,25 @@
 
   &-title {
     grid-column: 2/4;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: $large-gutter;
+    @include mediumGutterBottom;
   }
 
   &-subheading {
-    grid-column: 2/4;
-    padding-bottom: 40px;
+    grid-column: 2/5;
+    @include mediumGutterBottom;
   }
 
   .copyright {
     grid-column: 2/6;
-    padding-bottom: 40px;
+    @include mediumGutterBottom;
   }
 
   &-navigation {
     grid-column: 2/ 6;
     display: flex;
     flex-direction: row;
-    padding-bottom: 40px;
+    padding-bottom: $medium-gutter;
 
     p:first-child {
       padding-right: 20px;

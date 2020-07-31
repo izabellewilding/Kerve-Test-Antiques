@@ -12,6 +12,9 @@
   transition: all 0.3s ease-in-out;
 
   @include media(tablet) {
+    // width: 50px;
+    // height: 3px;
+    // margin: 10px auto;
   }
 }
 

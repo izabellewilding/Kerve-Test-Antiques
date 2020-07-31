@@ -15,13 +15,16 @@
   }
 
   &-inner {
-    grid-column: 2/6;
+    grid-column: 2/3;
     display: flex;
     flex-direction: column;
     height: 100%;
 
     .hero-title {
       padding-top: 29px;
+      @include media(tablet) {
+        padding-top: 70px;
+      }
     }
   }
 
@@ -33,7 +36,9 @@
     justify-content: flex-end;
     grid-column: 2/6;
     flex-direction: column;
-
+    @include media(tablet) {
+      padding-bottom: 30px;
+    }
     .arrow {
       width: 40px;
     }

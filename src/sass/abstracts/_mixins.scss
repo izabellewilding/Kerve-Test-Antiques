@@ -56,6 +56,10 @@
     color: $grey-1;
     padding-top: 19px;
 
+    @include media(tablet) {
+      font-size: 22px;
+    }
+
     &-number {
       @include centered;
       font-family: "AvenirLTStd-Book";
@@ -63,6 +67,10 @@
       padding: 10px;
       letter-spacing: 2px;
       font-weight: bold;
+
+      @include media(tablet) {
+        font-size: 22px;
+      }
     }
 
     &-slash {
@@ -90,7 +98,7 @@
 
 @mixin eventItem {
   grid-column: 2/6;
-  padding-top: 40px;
+  padding-top: $medium-gutter;
 }
 
 @mixin scalingSvgContainer {
@@ -100,4 +108,36 @@
   padding: 0;
   width: 26px;
   height: 24px;
+}
+
+@mixin mediumGutterTop {
+  padding-top: 40px;
+
+  @include media(tablet) {
+    padding-top: 60px;
+  }
+}
+
+@mixin mediumGutterBottom {
+  padding-bottom: 40px;
+
+  @include media(tablet) {
+    padding-bottom: 60px;
+  }
+}
+
+@mixin largeGutterTop {
+  padding-top: 80px;
+
+  @include media(tablet) {
+    padding-top: 160px;
+  }
+}
+
+@mixin largeGutterBottom {
+  padding-bottom: 80px;
+
+  @include media(tablet) {
+    padding-bottom: 120px;
+  }
 }

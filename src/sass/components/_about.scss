@@ -8,16 +8,14 @@
     max-width: 70%;
     text-align: center;
     margin: auto;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    @include largeGutterTop;
+    @include mediumGutterBottom;
     position: relative;
-
-    @include themeLine;
   }
   &-description {
     grid-column: 2/6;
-    padding-top: 40px;
-    padding-bottom: 80px;
+    @include mediumGutterTop;
+    @include largeGutterBottom;
     margin: auto;
     width: 85%;
   }
@@ -27,7 +25,7 @@
   .product-caption {
     @include productCaption;
     color: $grey-3;
-    padding-bottom: 80px;
+    padding-bottom: $large-gutter;
     .caption {
       &-number {
         color: $gold;
