@@ -43,10 +43,11 @@
   @include centered;
   flex-direction: row;
   grid-column: 2/6;
-  width: 92%;
+  width: 90%;
   margin: auto;
   margin-bottom: 0;
   margin-top: 0;
+  max-width: 500px;
 
   .caption {
     font-family: "AvenirLTStd-Book";
@@ -75,7 +76,7 @@
 
     &-slash {
       font-family: "Swiss721BT-Thin";
-      font-size: 24px;
+      font-size: 27px;
       padding: 10px;
       font-weight: bold;
     }
@@ -91,14 +92,19 @@
     right: 0;
     height: 0.3px;
     border-bottom: 0.5px solid #988468;
-    width: 37%;
+    width: 30%;
     margin: auto;
+    opacity: 0.6;
+
+    @include media(tablet) {
+      width: 20%;
+    }
   }
 }
 
 @mixin eventItem {
   grid-column: 2/6;
-  padding-top: $medium-gutter;
+  @include mediumGutterTop;
 }
 
 @mixin scalingSvgContainer {
@@ -130,7 +136,7 @@
   padding-top: 80px;
 
   @include media(tablet) {
-    padding-top: 160px;
+    padding-top: 130px;
   }
 }
 
@@ -138,6 +144,6 @@
   padding-bottom: 80px;
 
   @include media(tablet) {
-    padding-bottom: 120px;
+    padding-bottom: 130px;
   }
 }

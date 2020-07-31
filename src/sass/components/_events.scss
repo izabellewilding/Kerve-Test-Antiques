@@ -1,8 +1,7 @@
 .events {
   background-color: $white;
-  padding-top: $large-gutter;
-  padding-bottom: $large-gutter;
-
+  @include largeGutterTop;
+  @include largeGutterBottom;
   @include grid(mobile);
 
   .events-title-container {
@@ -29,13 +28,18 @@
       border: solid 2px $gold;
       color: $gold;
       font-size: 14px;
-      text-transform: uppercase;
       padding: 12px 40px 12px 40px;
+      text-transform: uppercase;
       letter-spacing: 2px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       margin: auto;
+
+      @include media(tablet) {
+        font-size: 24.47px;
+        padding: 29px 50px 29px 50px;
+      }
     }
   }
 }

@@ -18,14 +18,20 @@
     @include largeGutterBottom;
     margin: auto;
     width: 85%;
+
+    @include media(tablet) {
+      width: 80%;
+    }
   }
   &-appreciation {
     grid-column: 1/7;
   }
   .product-caption {
     @include productCaption;
+
     color: $grey-3;
-    padding-bottom: $large-gutter;
+    @include largeGutterBottom;
+
     .caption {
       &-number {
         color: $gold;

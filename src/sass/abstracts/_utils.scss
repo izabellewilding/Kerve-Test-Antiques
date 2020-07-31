@@ -15,7 +15,7 @@
 }
 .hidden-desktop {
   display: block;
-  @include media(tablet) {
+  @include media(desktop) {
     display: none;
   }
 }

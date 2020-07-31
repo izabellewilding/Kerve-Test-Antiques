@@ -4,7 +4,8 @@
 
   &-title {
     grid-column: 2/4;
-    padding-top: $large-gutter;
+    max-width: 236px;
+    @include largeGutterTop;
     @include mediumGutterBottom;
   }
 
@@ -22,7 +23,7 @@
     grid-column: 2/ 6;
     display: flex;
     flex-direction: row;
-    padding-bottom: $medium-gutter;
+    @include mediumGutterBottom;
 
     p:first-child {
       padding-right: 20px;
