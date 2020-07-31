@@ -64,3 +64,17 @@
     }
   }
 }
+
+@mixin themeLine {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.3px;
+    border-bottom: 0.5px solid #988468;
+    width: 37%;
+    margin: auto;
+  }
+}

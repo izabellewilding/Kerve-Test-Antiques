@@ -1,9 +1,0 @@
-.events {
-  background-color: $white;
-  @include grid(mobile);
-
-  .events-title-container {
-    grid-column: 2/6;
-    @include centered;
-  }
-}

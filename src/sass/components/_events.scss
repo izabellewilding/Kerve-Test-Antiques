@@ -1,0 +1,18 @@
+.events {
+  background-color: $white;
+  padding-top: 80px;
+  @include grid(mobile);
+
+  .events-title-container {
+    grid-column: 2/6;
+    position: relative;
+    padding-bottom: 40px;
+    @include centered;
+    @include themeLine;
+  }
+
+  .event-item {
+    grid-column: 2/6;
+    padding-top: 40px;
+  }
+}
