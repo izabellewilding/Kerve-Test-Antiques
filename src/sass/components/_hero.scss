@@ -7,6 +7,9 @@
 
   @include centered;
   @include grid(mobile);
+  @include media(tablet) {
+    @include grid(tablet);
+  }
   @include media(desktop) {
     background-image: url(../assets/images/desktop_hero.jpg);
   }
