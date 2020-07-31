@@ -17,15 +17,31 @@
   font-size: 27px;
   line-height: 25px;
 }
-// h4 {
-//   font-family: "PalatinoLT-Roman";
-//   color: $theme-secondary;
-// }
+.heading-4 {
+  font-family: "PalatinoLT-Roman";
+  text-transform: uppercase;
+  color: $gold;
+  letter-spacing: 1px;
+}
+
 .body {
   font-family: "PalatinoLT-Light";
   color: $grey-1;
   font-size: 20px;
   text-align: center;
+}
+
+.copyright {
+  color: $grey-4;
+  font-family: "AvenirLTStd-Book";
+  font-size: 13px;
+}
+
+.footer-navigation {
+  text-transform: uppercase;
+  font-family: "AvenirLTStd-Book";
+  color: $grey-3;
+  font-size: 12px;
 }
 
 .section-title {
@@ -39,4 +55,13 @@
 .event-body-text {
   font-family: "AvenirLTStd-Book";
   color: $grey-3;
+}
+
+.footer .heading-1 {
+  font-size: 28px;
+  line-height: 28px;
+}
+.footer .heading-3 {
+  font-size: 21px;
+  line-height: 21px;
 }
