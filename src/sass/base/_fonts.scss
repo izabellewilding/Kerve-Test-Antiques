@@ -1,18 +1,18 @@
-h1 {
+.heading-1 {
   font-family: "PalatinoLT-Light";
   text-transform: uppercase;
   color: $white;
   font-size: 43px;
   line-height: 42px;
 }
-h2 {
+.heading-2 {
   font-family: "PalatinoLT-Light";
   color: $black;
   text-transform: uppercase;
   text-align: center;
   font-size: 30px;
 }
-h3 {
+.heading-3 {
   font-family: "PalatinoLT-Light";
   color: $white;
   font-size: 27px;
@@ -27,4 +27,13 @@ h3 {
   color: $grey-1;
   font-size: 20px;
   text-align: center;
+}
+
+.section-title {
+  font-family: "AvenirLTStd-Medium";
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #988468;
+  text-align: center;
+  letter-spacing: 2px;
 }

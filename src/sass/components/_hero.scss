@@ -39,6 +39,8 @@
 
 .product-caption {
   @include productCaption;
+  padding-bottom: 16.2px;
+
   .caption {
     color: $grey-3;
     &-number {
