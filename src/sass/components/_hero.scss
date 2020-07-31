@@ -3,22 +3,32 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
+  flex-direction: column;
 
+  @include centered;
   @include grid(mobile);
-  grid-template-rows: 54px auto 151px;
-
   @include media(desktop) {
     background-image: url(../assets/images/desktop_hero.jpg);
   }
 
-  &-title {
-    grid-column: 2/4;
-    padding-top: 29px;
+  &-inner {
+    grid-column: 2/6;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .hero-title {
+      padding-top: 29px;
+    }
   }
 
   &-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
     grid-column: 2/6;
-    @include centered;
     flex-direction: column;
 
     .arrow {

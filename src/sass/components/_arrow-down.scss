@@ -1,0 +1,60 @@
+.arrow-down path {
+  stroke: $white;
+  fill: transparent;
+  stroke-width: 2px;
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite;
+}
+
+.scaling-svg-container {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding: 0;
+  padding-bottom: 100%;
+  width: 30px;
+  height: 24px;
+  /* override this inline for aspect ratio other than square */
+}
+.arrow-down {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+// @keyframes arrow {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(10px);
+//   }
+//   80% {
+//     opacity: 1;
+//     transform: translateY(50px);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(50px);
+//   }
+// }
+
+// @-webkit-keyframes arrow /*Safari and Chrome*/ {
+//   0% {
+//     opacity: 0;
+//     transform: translateY(10px);
+//   }
+//   80% {
+//     opacity: 1;
+//     transform: translateY(50px);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: translateY(50px);
+//   }
+// }
+
+.arrows path.a1 {
+  animation-delay: -0.5s;
+  -webkit-animation-delay: -0.5s; /* Safari and Chrome */
+}
