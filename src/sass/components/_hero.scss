@@ -57,11 +57,10 @@
     }
 
     @include media(desktop-sm) {
-      grid-column: 9/14;
+      grid-column: 9/13;
       align-items: initial;
       align-items: baseline;
       justify-content: space-between;
-      max-width: 300px;
       padding-top: 30px;
     }
 
