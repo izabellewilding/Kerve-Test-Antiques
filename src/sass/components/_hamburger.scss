@@ -1,10 +1,5 @@
 .hamburger {
-  padding: 10px 20px 10px 20px;
   display: block;
-
-  @include media(mobile-lg) {
-    padding: 10px 25px 10px 25px;
-  }
 
   @include media(desktop-lg) {
     display: none;
