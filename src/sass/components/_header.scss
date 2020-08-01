@@ -10,6 +10,10 @@
   @include media(desktop-sm) {
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+  }
+
+  @include media(desktop-lg) {
     padding: 15px 153px;
   }
 
@@ -48,7 +52,7 @@ nav {
     }
 
     li {
-      padding-right: 10px;
+      padding-right: 15px;
       &:last-child {
         padding-right: 0;
       }
@@ -70,6 +74,22 @@ nav {
   display: none;
   height: 100%;
 
+  &-title {
+    display: flex;
+    align-items: center;
+
+    .scaling-svg-container {
+      width: 13px;
+      height: 8px;
+      margin-left: 5px;
+    }
+    .arrow {
+      margin: 1px;
+      path {
+        stroke: $gold;
+      }
+    }
+  }
   @include media(desktop-sm) {
     display: block;
   }
@@ -79,8 +99,14 @@ nav {
   .sub-nav {
     position: absolute;
     background-color: $black;
-    padding: 10px;
+    padding: 44px 18px 0px 12px;
     left: -12px;
+    top: 0;
+    z-index: -2;
+
+    li {
+      padding-bottom: 15px;
+    }
   }
 }
 

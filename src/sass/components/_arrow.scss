@@ -28,6 +28,11 @@
   top: 0;
 }
 
+.hero .arrow {
+  @include media(desktop-sm) {
+    display: none;
+  }
+}
 // @keyframes arrow {
 //   0% {
 //     opacity: 0;
