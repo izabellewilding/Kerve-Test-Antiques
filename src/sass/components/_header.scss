@@ -12,7 +12,20 @@
   }
 
   .header-title {
-    padding: 40px 25px 40px 25px;
+    font-family: "PalatinoLT-Roman";
+    color: $white;
+    text-transform: uppercase;
+    font-size: 36px;
+    display: none;
+
+    @include media(desktop-sm) {
+      display: block;
+      font-size: 20px;
+      padding: 10px 25px 10px 25px;
+    }
+    @include media(desktop-lg) {
+      padding: 40px 25px 40px 25px;
+    }
   }
 
   .nav-list {
@@ -30,13 +43,18 @@
 }
 
 .fixed-adjust {
-  padding-top: 54px;
+  padding: 26px;
   grid-column: span 6;
 
   @include media(mobile-lg) {
-    padding-top: 87px;
+    padding: 25px;
+  }
+  @include media(desktop-sm) {
+    padding: 30px;
+    grid-column: span 14;
   }
   @include media(desktop-lg) {
-    padding-top: 103px;
+    padding: 103px;
+    grid-column: span 14;
   }
 }

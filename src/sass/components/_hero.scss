@@ -1,7 +1,7 @@
 .hero {
   background-image: url(../assets/images/mobile_hero.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: #95a2a8;
   height: 100vh;
@@ -14,12 +14,12 @@
     @include grid(mobile-lg);
   }
 
-  @include media(desktop-lg) {
-    @include grid(desktop-lg);
+  @include media(desktop-sm) {
+    @include grid(desktop-sm);
     background-image: url(../assets/images/desktop_hero.jpg);
     height: auto;
-    grid-template-rows: 1fr 1fr;
-    max-height: 85vh;
+    background-size: cover;
+    grid-template-rows: 1.5fr 1fr;
   }
 
   &-inner {
@@ -27,22 +27,24 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    justify-content: flex-end;
 
     .hero-title {
       padding-top: 29px;
+
       @include media(mobile-lg) {
         padding-top: 70px;
       }
-      @include media(desktop-lg) {
+      @include media(desktop-sm) {
         @include largeGutterTop;
-        @include mediumGutterBottom;
+        padding-bottom: 30px;
+        position: relative;
+        @include heroThemeLine;
       }
     }
 
-    @include media(desktop-lg) {
-      grid-column: 9/12;
-      position: relative;
-      @include heroThemeLine;
+    @include media(desktop-sm) {
+      grid-column: 9/14;
     }
   }
 
@@ -54,30 +56,33 @@
     justify-content: flex-end;
     grid-column: 2/6;
     flex-direction: column;
-    padding-bottom: 20px;
 
     @include media(mobile-lg) {
       padding-bottom: 30px;
     }
 
-    @include media(desktop-lg) {
-      grid-column: 9/13;
+    @include media(desktop-sm) {
+      grid-column: 9/14;
       align-items: initial;
       display: flex;
       align-items: baseline;
       justify-content: space-between;
-
-      @include mediumGutterTop;
+      max-width: 300px;
+      padding-top: 30px;
     }
 
-    .desktop-lg-subtitle {
+    .desktop-subtitle {
       display: none;
 
-      @include media(desktop-lg) {
+      @include media(desktop-sm) {
         display: block;
         height: 100%;
+        font-family: "PalatinoLT-Light";
+        color: $black;
+        font-size: 25px;
       }
     }
+
     .arrow {
       width: 40px;
     }
@@ -88,9 +93,13 @@
   @include productCaption;
   padding-bottom: 16.2px;
 
+  @include media(desktop-sm) {
+    padding-bottom: 0;
+  }
+
   .caption {
     color: $grey-3;
-    @include media(desktop-lg) {
+    @include media(desktop-sm) {
       color: $black;
     }
     &-number {

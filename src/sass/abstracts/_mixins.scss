@@ -10,13 +10,13 @@
     }
   }
   @if $breakpoint==desktop-sm {
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: 900px) {
       @content;
     }
   }
 
   @if $breakpoint==desktop-lg {
-    @media only screen and (min-width: 1400px) {
+    @media only screen and (min-width: 1500px) {
       @content;
     }
   }
@@ -30,6 +30,10 @@
   @if $breakpoint==mobile-lg {
     display: grid;
     grid-template-columns: 54px repeat(4, 1fr) 54px;
+  }
+  @if $breakpoint==desktop-sm {
+    display: grid;
+    grid-template-columns: 158px repeat(12, 1fr) 158px;
   }
   @if $breakpoint==desktop-lg {
     display: grid;
@@ -56,7 +60,9 @@
   margin-top: 0;
 
   max-width: 500px;
-
+  @include media(desktop-sm) {
+    width: 100%;
+  }
   @include media(desktop-lg) {
     max-width: 800px;
     margin: initial;
@@ -68,9 +74,6 @@
     line-height: 20px;
     color: $grey-1;
 
-    @include media(mobile-lg) {
-      font-size: 22px;
-    }
     @include media(desktop-lg) {
       font-size: 24px;
       line-height: 32px;
@@ -83,10 +86,6 @@
       padding: 10px;
       letter-spacing: 2px;
       font-weight: bold;
-
-      @include media(mobile-lg) {
-        font-size: 22px;
-      }
 
       @include media(desktop-lg) {
         font-size: 24px;
@@ -155,6 +154,9 @@
   @include media(mobile-lg) {
     padding-top: 60px;
   }
+  // @include media(desktop-sm) {
+  //   padding-top: 80px;
+  // }
   @include media(desktop-lg) {
     padding-top: 130px;
   }
@@ -166,6 +168,9 @@
   @include media(mobile-lg) {
     padding-bottom: 60px;
   }
+  // @include media(desktop-sm) {
+  //   padding-bottom: 80px;
+  // }
   @include media(desktop-lg) {
     padding-bottom: 130px;
   }
@@ -177,6 +182,9 @@
   @include media(mobile-lg) {
     padding-top: 130px;
   }
+  @include media(desktop-sm) {
+    padding-top: 180px;
+  }
   @include media(desktop-lg) {
     padding-top: 200px;
   }
@@ -187,6 +195,9 @@
 
   @include media(mobile-lg) {
     padding-bottom: 130px;
+  }
+  @include media(desktop-sm) {
+    padding-bottom: 180px;
   }
   @include media(desktop-lg) {
     padding-bottom: 200px;

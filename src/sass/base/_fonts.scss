@@ -8,6 +8,10 @@
     font-size: 75.45px;
     line-height: 69.86px;
   }
+  @include media(desktop-sm) {
+    font-size: 60px;
+    line-height: 60px;
+  }
   @include media(desktop-lg) {
     font-size: 153.19px;
     line-height: 141.83px;
@@ -21,6 +25,9 @@
 
   @include media(mobile-lg) {
     font-size: 56px;
+  }
+  @include media(desktop-sm) {
+    font-size: 46px;
   }
   @include media(desktop-lg) {
     font-size: 96px;
@@ -47,17 +54,7 @@
     font-size: 26px;
   }
 }
-.header-title {
-  font-family: "PalatinoLT-Roman";
-  color: $white;
-  text-transform: uppercase;
-  font-size: 36px;
-  display: none;
 
-  @include media(desktop-lg) {
-    display: block;
-  }
-}
 .body {
   font-family: "PalatinoLT-Light";
   color: $grey-1;
@@ -72,10 +69,6 @@
   }
 }
 
-.hero .body {
-  color: $black;
-  text-align: start;
-}
 .section-title {
   font-family: "AvenirLTStd-Medium";
   font-size: 14px;

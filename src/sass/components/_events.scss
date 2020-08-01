@@ -4,8 +4,8 @@
   @include largeGutterBottom;
   @include grid(mobile);
 
-  @include media(desktop-lg) {
-    @include grid(desktop-lg);
+  @include media(desktop-sm) {
+    @include grid(desktop-sm);
   }
 
   .events-title-container {
@@ -15,7 +15,7 @@
     @include centered;
     @include themeLine;
 
-    @include media(desktop-lg) {
+    @include media(desktop-sm) {
       grid-column: 5/11;
       flex-direction: row;
     }
@@ -24,8 +24,13 @@
   .event-items {
     grid-column: 2/6;
 
+    @include media(desktop-sm) {
+      grid-column: 2/14;
+      max-width: 70%;
+      margin: auto;
+    }
     @include media(desktop-lg) {
-      grid-column: 3/13;
+      grid-column: 2/14;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 200px;
@@ -72,9 +77,9 @@
             line-height: 46px;
           }
 
-          @include media(desktop-lg) {
+          @include media(desktop-sm) {
             max-width: 100%;
-            font-size: 32px;
+            font-size: 30px;
             line-height: 52px;
           }
         }

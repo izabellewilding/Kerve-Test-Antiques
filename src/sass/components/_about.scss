@@ -2,8 +2,8 @@
   @include centered;
   @include grid(mobile);
 
-  @include media(desktop-lg) {
-    @include grid(desktop-lg);
+  @include media(desktop-sm) {
+    @include grid(desktop-sm);
   }
 
   background-color: $white;
@@ -16,8 +16,8 @@
     @include mediumGutterBottom;
     position: relative;
 
-    @include media(desktop-lg) {
-      grid-column: 6/10;
+    @include media(desktop-sm) {
+      grid-column: 5/11;
       max-width: 100%;
     }
   }
@@ -31,7 +31,7 @@
     @include media(mobile-lg) {
       width: 80%;
     }
-    @include media(desktop-lg) {
+    @include media(desktop-sm) {
       grid-column: 5/11;
       width: 100%;
     }
@@ -41,7 +41,7 @@
     display: flex;
     width: 100%;
 
-    @include media(desktop-lg) {
+    @include media(desktop-sm) {
       grid-column: 5/11;
     }
   }
@@ -50,8 +50,8 @@
 
     @include productCaption;
 
-    @include media(desktop-lg) {
-      grid-column: 6/10;
+    @include media(desktop-sm) {
+      grid-column: 4/12;
       margin: auto;
     }
 
