@@ -1,7 +1,13 @@
 .hamburger {
   padding: 10px 20px 10px 20px;
+  display: block;
+
   @include media(mobile-lg) {
     padding: 15px 30px 15px 30px;
+  }
+
+  @include media(desktop-lg) {
+    display: none;
   }
 }
 .hamburger .line {

@@ -4,41 +4,79 @@
   @include largeGutterBottom;
   @include grid(mobile);
 
+  @include media(desktop-lg) {
+    @include grid(desktop-lg);
+  }
+
   .events-title-container {
     grid-column: 2/6;
     position: relative;
     @include mediumGutterBottom;
     @include centered;
     @include themeLine;
-  }
-
-  .event-item {
-    @include eventItem;
-    text-align: center;
 
     @include media(desktop-lg) {
-      text-align: start;
+      grid-column: 5/11;
+      flex-direction: row;
     }
-    .event-body {
-      @include mediumGutterTop;
-      @include mediumGutterBottom;
-      line-height: 30px;
-    }
-    .event-button {
-      border: solid 2px $gold;
-      color: $gold;
-      font-size: 14px;
-      padding: 12px 40px 12px 40px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin: auto;
+  }
 
-      @include media(mobile-lg) {
-        font-size: 24.47px;
-        padding: 29px 50px 29px 50px;
+  .event-items {
+    grid-column: 2/6;
+
+    @include media(desktop-lg) {
+      grid-column: span 14;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 200px;
+    }
+
+    .event-item {
+      @include eventItem;
+      text-align: center;
+
+      @include media(desktop-lg) {
+        text-align: start;
+      }
+
+      &.item-1 {
+        display: none;
+        @include media(desktop-sm) {
+          display: block;
+          grid-column: 1/2;
+        }
+      }
+      &.item-2 {
+        grid-column: 2/3;
+      }
+      &.item-3 {
+        display: none;
+        @include media(desktop-sm) {
+          display: block;
+          grid-column: 3/4;
+        }
+      }
+      .event-body {
+        @include mediumGutterTop;
+        @include mediumGutterBottom;
+        line-height: 30px;
+      }
+      .event-button {
+        border: solid 2px $gold;
+        color: $gold;
+        font-size: 14px;
+        padding: 12px 40px 12px 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+
+        @include media(mobile-lg) {
+          font-size: 24.47px;
+          padding: 29px 50px 29px 50px;
+        }
       }
     }
   }

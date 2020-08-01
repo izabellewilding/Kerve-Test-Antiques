@@ -9,13 +9,13 @@
 
 .hidden-mobile {
   display: none;
-  @include media(desktop-lg) {
+  @include media(desktop-sm) {
     display: block;
   }
 }
 .hidden-desktop {
   display: block;
-  @include media(desktop-lg) {
+  @include media(desktop-sm) {
     display: none;
   }
 }

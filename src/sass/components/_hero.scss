@@ -27,9 +27,6 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    position: relative;
-
-    // @include heroThemeLine;
 
     .hero-title {
       padding-top: 29px;
@@ -44,6 +41,8 @@
 
     @include media(desktop-lg) {
       grid-column: 9/12;
+      position: relative;
+      @include heroThemeLine;
     }
   }
 

@@ -16,8 +16,12 @@
   }
 
   .nav-list {
-    display: flex;
+    display: none;
     flex-direction: row;
+
+    @include media(desktop-lg) {
+      display: flex;
+    }
 
     li {
       padding: 40px 25px 40px 25px;

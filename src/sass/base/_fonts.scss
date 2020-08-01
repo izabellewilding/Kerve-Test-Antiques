@@ -52,6 +52,11 @@
   color: $white;
   text-transform: uppercase;
   font-size: 36px;
+  display: none;
+
+  @include media(desktop-lg) {
+    display: block;
+  }
 }
 .body {
   font-family: "PalatinoLT-Light";

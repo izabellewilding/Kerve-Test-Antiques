@@ -114,13 +114,16 @@
     left: 0;
     right: 0;
     height: 0.3px;
-    border-bottom: 0.5px solid #988468;
+    border-bottom: 0.5px solid #9884686e;
     width: 25%;
     margin: auto;
-    opacity: 0.5;
 
     @include media(mobile-lg) {
       width: 20%;
+    }
+
+    @include media(desktop-lg) {
+      width: 15%;
     }
   }
 }
@@ -130,7 +133,6 @@
   @include themeLine;
   border-bottom: 0.5px solid $white;
   width: 20%;
-  opacity: 0.3;
 }
 
 @mixin eventItem {
