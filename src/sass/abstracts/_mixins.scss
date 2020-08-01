@@ -4,14 +4,19 @@
       @content;
     }
   }
-  @if $breakpoint==tablet {
-    @media only screen and (min-width: 480px) {
+  @if $breakpoint==mobile-lg {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint==desktop-sm {
+    @media only screen and (min-width: 992px) {
       @content;
     }
   }
 
-  @if $breakpoint==desktop {
-    @media only screen and (min-width: 1025px) {
+  @if $breakpoint==desktop-lg {
+    @media only screen and (min-width: 1400px) {
       @content;
     }
   }
@@ -22,9 +27,13 @@
     display: grid;
     grid-template-columns: 32px repeat(4, 1fr) 32px;
   }
-  @if $breakpoint==tablet {
+  @if $breakpoint==mobile-lg {
     display: grid;
     grid-template-columns: 54px repeat(4, 1fr) 54px;
+  }
+  @if $breakpoint==desktop-lg {
+    display: grid;
+    grid-template-columns: 158px repeat(12, 1fr) 158px;
   }
 }
 
@@ -41,24 +50,32 @@
 
 @mixin productCaption {
   @include centered;
-  flex-direction: row;
   grid-column: 2/6;
   width: 90%;
   margin: auto;
   margin-bottom: 0;
   margin-top: 0;
+
   max-width: 500px;
+
+  @include media(desktop-lg) {
+    max-width: 800px;
+    margin: initial;
+  }
 
   .caption {
     font-family: "AvenirLTStd-Book";
     font-size: 12px;
-    text-align: center;
     line-height: 20px;
     color: $grey-1;
     padding-top: 19px;
 
-    @include media(tablet) {
+    @include media(mobile-lg) {
       font-size: 22px;
+    }
+    @include media(desktop-lg) {
+      font-size: 24px;
+      line-height: 32px;
     }
 
     &-number {
@@ -69,8 +86,12 @@
       letter-spacing: 2px;
       font-weight: bold;
 
-      @include media(tablet) {
+      @include media(mobile-lg) {
         font-size: 22px;
+      }
+
+      @include media(desktop-lg) {
+        font-size: 24px;
       }
     }
 
@@ -79,6 +100,10 @@
       font-size: 27px;
       padding: 10px;
       font-weight: bold;
+
+      @include media(desktop-lg) {
+        font-size: 40px;
+      }
     }
   }
 }
@@ -92,14 +117,22 @@
     right: 0;
     height: 0.3px;
     border-bottom: 0.5px solid #988468;
-    width: 30%;
+    width: 25%;
     margin: auto;
-    opacity: 0.6;
+    opacity: 0.5;
 
-    @include media(tablet) {
+    @include media(mobile-lg) {
       width: 20%;
     }
   }
+}
+
+//will return to fix the hero desktop-lg line
+@mixin heroThemeLine {
+  @include themeLine;
+  border-bottom: 0.5px solid $white;
+  width: 20%;
+  opacity: 0.3;
 }
 
 @mixin eventItem {
@@ -119,31 +152,43 @@
 @mixin mediumGutterTop {
   padding-top: 40px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     padding-top: 60px;
+  }
+  @include media(desktop-lg) {
+    padding-top: 80px;
   }
 }
 
 @mixin mediumGutterBottom {
   padding-bottom: 40px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     padding-bottom: 60px;
+  }
+  @include media(desktop-lg) {
+    padding-bottom: 80px;
   }
 }
 
 @mixin largeGutterTop {
   padding-top: 80px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     padding-top: 130px;
+  }
+  @include media(desktop-lg) {
+    padding-top: 180px;
   }
 }
 
 @mixin largeGutterBottom {
   padding-bottom: 80px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     padding-bottom: 130px;
+  }
+  @include media(desktop-lg) {
+    padding-bottom: 180px;
   }
 }

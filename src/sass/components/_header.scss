@@ -9,6 +9,12 @@
 
 .fixed-adjust {
   padding-top: 54px;
-  height: 54px;
   grid-column: span 6;
+
+  @include media(mobile-lg) {
+    padding-top: 87px;
+  }
+  @include media(desktop-lg) {
+    padding-top: 103px;
+  }
 }

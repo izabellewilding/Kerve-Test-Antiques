@@ -1,6 +1,6 @@
 .hamburger {
   padding: 10px 20px 10px 20px;
-  @include media(tablet) {
+  @include media(mobile-lg) {
     padding: 15px 30px 15px 30px;
   }
 }
@@ -14,7 +14,7 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     width: 50px;
     height: 3px;
     margin: 12px auto;

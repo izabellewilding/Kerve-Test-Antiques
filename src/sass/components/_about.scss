@@ -19,7 +19,7 @@
     margin: auto;
     width: 85%;
 
-    @include media(tablet) {
+    @include media(mobile-lg) {
       width: 80%;
     }
   }

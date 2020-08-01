@@ -16,7 +16,7 @@
     @include eventItem;
     text-align: center;
 
-    @include media(desktop) {
+    @include media(desktop-lg) {
       text-align: start;
     }
     .event-body {
@@ -36,7 +36,7 @@
       align-items: center;
       margin: auto;
 
-      @include media(tablet) {
+      @include media(mobile-lg) {
         font-size: 24.47px;
         padding: 29px 50px 29px 50px;
       }

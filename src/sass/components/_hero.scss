@@ -1,17 +1,25 @@
 .hero {
   background-image: url(../assets/images/mobile_hero.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #95a2a8;
   height: 100vh;
   flex-direction: column;
 
   @include centered;
   @include grid(mobile);
-  @include media(tablet) {
-    @include grid(tablet);
+
+  @include media(mobile-lg) {
+    @include grid(mobile-lg);
   }
-  @include media(desktop) {
+
+  @include media(desktop-lg) {
+    @include grid(desktop-lg);
     background-image: url(../assets/images/desktop_hero.jpg);
+    height: auto;
+    grid-template-rows: 1fr 1fr;
+    max-height: 85vh;
   }
 
   &-inner {
@@ -19,12 +27,23 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    position: relative;
+
+    // @include heroThemeLine;
 
     .hero-title {
       padding-top: 29px;
-      @include media(tablet) {
+      @include media(mobile-lg) {
         padding-top: 70px;
       }
+      @include media(desktop-lg) {
+        @include largeGutterTop;
+        @include mediumGutterBottom;
+      }
+    }
+
+    @include media(desktop-lg) {
+      grid-column: 9/13;
     }
   }
 
@@ -37,8 +56,28 @@
     grid-column: 2/6;
     flex-direction: column;
     padding-bottom: 20px;
-    @include media(tablet) {
+
+    @include media(mobile-lg) {
       padding-bottom: 30px;
+    }
+
+    @include media(desktop-lg) {
+      grid-column: 9/13;
+      align-items: initial;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      @include mediumGutterTop;
+    }
+
+    .desktop-lg-subtitle {
+      display: none;
+
+      @include media(desktop-lg) {
+        display: block;
+        height: 100%;
+      }
     }
     .arrow {
       width: 40px;
@@ -52,6 +91,9 @@
 
   .caption {
     color: $grey-3;
+    @include media(desktop-lg) {
+      color: $black;
+    }
     &-number {
       color: $white;
     }

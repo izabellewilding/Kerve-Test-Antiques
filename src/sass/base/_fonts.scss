@@ -4,9 +4,13 @@
   color: $white;
   font-size: 43px;
   line-height: 41px;
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 75.45px;
     line-height: 69.86px;
+  }
+  @include media(desktop-lg) {
+    font-size: 153.19px;
+    line-height: 141.83px;
   }
 }
 .heading-2 {
@@ -15,8 +19,11 @@
   text-transform: uppercase;
   font-size: 30px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 56px;
+  }
+  @include media(desktop-lg) {
+    font-size: 96px;
   }
 }
 .heading-3 {
@@ -25,7 +32,7 @@
   font-size: 27px;
   line-height: 25px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 51.56px;
     line-height: 51.56px;
   }
@@ -36,7 +43,7 @@
   color: $gold;
   letter-spacing: 1px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 26px;
   }
 }
@@ -47,11 +54,18 @@
   font-size: 20px;
   text-align: center;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 36px;
+  }
+  @include media(desktop-lg) {
+    font-size: 52px;
   }
 }
 
+.hero .body {
+  color: $black;
+  text-align: start;
+}
 .section-title {
   font-family: "AvenirLTStd-Medium";
   font-size: 14px;
@@ -60,7 +74,7 @@
   text-align: center;
   letter-spacing: 2px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 24px;
   }
 }
@@ -70,7 +84,7 @@
   max-width: 85%;
   margin: auto;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 26px;
     line-height: 46px;
   }
@@ -81,7 +95,7 @@
   font-size: 28px;
   line-height: 28px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 50.79px;
     line-height: 47.02px;
   }
@@ -90,7 +104,7 @@
   font-size: 21px;
   line-height: 21px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 34.7px;
     line-height: 42.32px;
   }
@@ -101,7 +115,7 @@
   font-family: "AvenirLTStd-Book";
   font-size: 13px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 20px;
   }
 }
@@ -112,7 +126,7 @@
   color: $grey-3;
   font-size: 12px;
 
-  @include media(tablet) {
+  @include media(mobile-lg) {
     font-size: 18px;
   }
 }
