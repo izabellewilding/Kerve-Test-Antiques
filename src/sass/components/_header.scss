@@ -21,10 +21,6 @@
     @include media(desktop-sm) {
       display: block;
       font-size: 20px;
-      padding: 10px 25px 10px 25px;
-    }
-    @include media(desktop-lg) {
-      padding: 40px 25px 40px 25px;
     }
   }
 
@@ -34,10 +30,6 @@
 
     @include media(desktop-lg) {
       display: flex;
-    }
-
-    li {
-      padding: 40px 25px 40px 25px;
     }
   }
 }
