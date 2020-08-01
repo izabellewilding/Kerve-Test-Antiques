@@ -88,17 +88,6 @@
     font-size: 24px;
   }
 }
-.event-body-text {
-  font-family: "AvenirLTStd-Book";
-  color: $grey-3;
-  max-width: 85%;
-  margin: auto;
-
-  @include media(mobile-lg) {
-    font-size: 26px;
-    line-height: 46px;
-  }
-}
 
 //footer font styles
 .footer .heading-1 {

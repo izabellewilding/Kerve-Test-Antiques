@@ -25,7 +25,7 @@
     grid-column: 2/6;
 
     @include media(desktop-lg) {
-      grid-column: span 14;
+      grid-column: 3/13;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 200px;
@@ -60,6 +60,24 @@
         @include mediumGutterTop;
         @include mediumGutterBottom;
         line-height: 30px;
+
+        &-text {
+          font-family: "AvenirLTStd-Book";
+          color: $grey-3;
+          max-width: 85%;
+          margin: auto;
+
+          @include media(mobile-lg) {
+            font-size: 26px;
+            line-height: 46px;
+          }
+
+          @include media(desktop-lg) {
+            max-width: 100%;
+            font-size: 32px;
+            line-height: 52px;
+          }
+        }
       }
       .event-button {
         border: solid 2px $gold;
@@ -76,6 +94,10 @@
         @include media(mobile-lg) {
           font-size: 24.47px;
           padding: 29px 50px 29px 50px;
+        }
+
+        @include media(desktop-lg) {
+          margin: initial;
         }
       }
     }
