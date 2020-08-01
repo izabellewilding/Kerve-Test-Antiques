@@ -16,15 +16,13 @@
   transition: all 0.3s ease-in-out;
 
   @include media(mobile-lg) {
-    width: 40px;
-    height: 3px;
-    margin: 8px auto;
-  }
-
-  @include media(desktop-sm) {
     width: 33px;
     height: 2px;
     margin: 7px auto;
+  }
+
+  @include media(desktop-sm) {
+    display: none;
   }
 }
 
