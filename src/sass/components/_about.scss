@@ -32,7 +32,7 @@
     }
     @include media(desktop-lg) {
       grid-column: 6/10;
-      width: 90%;
+      width: 100%;
     }
   }
   &-appreciation {
@@ -50,7 +50,8 @@
     @include productCaption;
 
     @include media(desktop-lg) {
-      grid-column: 7/9;
+      grid-column: 6/10;
+      margin: auto;
     }
 
     color: $grey-3;
