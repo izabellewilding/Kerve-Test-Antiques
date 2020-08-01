@@ -2,6 +2,10 @@
   @include centered;
   @include grid(mobile);
 
+  @include media(desktop-lg) {
+    @include grid(desktop-lg);
+  }
+
   background-color: $white;
   &-title {
     grid-column: 2/6;
@@ -11,6 +15,10 @@
     @include largeGutterTop;
     @include mediumGutterBottom;
     position: relative;
+
+    @include media(desktop-lg) {
+      grid-column: 6/10;
+    }
   }
   &-description {
     grid-column: 2/6;
@@ -22,12 +30,28 @@
     @include media(mobile-lg) {
       width: 80%;
     }
+    @include media(desktop-lg) {
+      grid-column: 6/10;
+      width: 90%;
+    }
   }
   &-appreciation {
     grid-column: 1/7;
+    display: flex;
+    width: 100%;
+
+    @include media(desktop-lg) {
+      grid-column: 5/11;
+    }
   }
   .product-caption {
+    grid-column: 2/6;
+
     @include productCaption;
+
+    @include media(desktop-lg) {
+      grid-column: 7/9;
+    }
 
     color: $grey-3;
     @include largeGutterBottom;

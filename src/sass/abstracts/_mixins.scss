@@ -50,7 +50,6 @@
 
 @mixin productCaption {
   @include centered;
-  grid-column: 2/6;
   width: 90%;
   margin: auto;
   margin-bottom: 0;
