@@ -10,6 +10,7 @@
   @include media(desktop-sm) {
     justify-content: space-between;
     align-items: center;
+    padding: 15px 153px;
   }
 
   .header-title {
@@ -35,6 +36,9 @@ nav {
   @include media(desktop-sm) {
     justify-content: center;
   }
+  @include media(desktop-lg) {
+    justify-content: flex-end;
+  }
   .nav-list {
     display: none;
     flex-direction: row;
@@ -56,6 +60,9 @@ nav {
   @include media(desktop-sm) {
     display: none;
   }
+  @include media(desktop-lg) {
+    display: block;
+  }
 }
 
 .view-more {
@@ -65,6 +72,9 @@ nav {
 
   @include media(desktop-sm) {
     display: block;
+  }
+  @include media(desktop-lg) {
+    display: none;
   }
   .sub-nav {
     position: absolute;
