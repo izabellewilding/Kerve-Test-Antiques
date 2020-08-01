@@ -32,6 +32,9 @@ nav {
   display: flex;
   justify-content: flex-end;
 
+  @include media(desktop-sm) {
+    justify-content: center;
+  }
   .nav-list {
     display: none;
     flex-direction: row;
@@ -46,6 +49,28 @@ nav {
         padding-right: 0;
       }
     }
+  }
+}
+
+.sub-nav-item {
+  @include media(desktop-sm) {
+    display: none;
+  }
+}
+
+.view-more {
+  position: relative;
+  display: none;
+  height: 100%;
+
+  @include media(desktop-sm) {
+    display: block;
+  }
+  .sub-nav {
+    position: absolute;
+    background-color: $black;
+    padding: 10px;
+    left: -12px;
   }
 }
 
