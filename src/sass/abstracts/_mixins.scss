@@ -33,7 +33,7 @@
   }
   @if $breakpoint==desktop-sm {
     display: grid;
-    grid-template-columns: 158px repeat(12, 1fr) 158px;
+    grid-template-columns: 100px repeat(12, 1fr) 100px;
   }
   @if $breakpoint==desktop-lg {
     display: grid;

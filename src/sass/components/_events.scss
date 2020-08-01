@@ -26,26 +26,25 @@
 
     @include media(desktop-sm) {
       grid-column: 2/14;
-      max-width: 70%;
-      margin: auto;
-    }
-    @include media(desktop-lg) {
-      grid-column: 2/14;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 200px;
+      column-gap: 50px;
     }
 
     .event-item {
       @include eventItem;
       text-align: center;
+      margin-left: auto;
+      margin-right: auto;
 
-      @include media(desktop-lg) {
+      @include media(desktop-sm) {
         text-align: start;
+        max-width: 278px;
       }
 
       &.item-1 {
         display: none;
+
         @include media(desktop-sm) {
           display: block;
           grid-column: 1/2;
@@ -61,11 +60,50 @@
           grid-column: 3/4;
         }
       }
-      .event-body {
-        @include mediumGutterTop;
-        @include mediumGutterBottom;
-        line-height: 30px;
+      .event-date {
+        font-family: "PalatinoLT-Light";
+        color: $black;
+        text-transform: uppercase;
+        font-size: 30px;
 
+        @include media(mobile-lg) {
+          font-size: 56px;
+        }
+        @include media(desktop-sm) {
+          font-size: 26px;
+        }
+        @include media(desktop-lg) {
+          font-size: 96px;
+        }
+      }
+      .event-title {
+        font-family: "PalatinoLT-Light";
+        color: $black;
+        text-transform: uppercase;
+        font-size: 30px;
+
+        @include media(mobile-lg) {
+          font-size: 56px;
+        }
+
+        @include media(desktop-sm) {
+          font-size: 26px;
+        }
+      }
+      .event-body {
+        line-height: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        @include media(mobile-lg) {
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+
+        @include media(desktop-sm) {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
         &-text {
           font-family: "AvenirLTStd-Book";
           color: $grey-3;
@@ -79,8 +117,8 @@
 
           @include media(desktop-sm) {
             max-width: 100%;
-            font-size: 30px;
-            line-height: 52px;
+            font-size: 13px;
+            line-height: 28px;
           }
         }
       }
@@ -101,8 +139,9 @@
           padding: 29px 50px 29px 50px;
         }
         @include media(desktop-sm) {
+          margin: initial;
           font-size: 12.47px;
-          padding: 15px 26px 15px 26px;
+          padding: 9px 16px 10px 26px;
         }
 
         @include media(desktop-lg) {
