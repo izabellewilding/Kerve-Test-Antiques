@@ -182,9 +182,7 @@
   @include media(mobile-lg) {
     padding-top: 130px;
   }
-  @include media(desktop-sm) {
-    padding-top: 180px;
-  }
+
   @include media(desktop-lg) {
     padding-top: 200px;
   }

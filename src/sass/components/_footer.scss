@@ -2,20 +2,43 @@
   background-color: $black;
   @include grid(mobile);
 
+  @include media(desktop-sm) {
+    @include grid(desktop-sm);
+  }
   &-title {
     grid-column: 2/4;
     max-width: 236px;
+
+    font-family: "PalatinoLT-Light";
+    color: $white;
+
     @include largeGutterTop;
     @include mediumGutterBottom;
+
+    &-lg {
+      text-transform: uppercase;
+      font-size: 33px;
+      line-height: 32px;
+
+      @include media(desktop-lg) {
+        font-size: 43px;
+        line-height: 41px;
+      }
+    }
+
+    &-sm {
+      font-size: 23px;
+      line-height: 19px;
+
+      @include media(desktop-sm) {
+        font-size: 35px;
+        line-height: 31px;
+      }
+    }
   }
 
   &-subheading {
     grid-column: 2/5;
-    @include mediumGutterBottom;
-  }
-
-  .copyright {
-    grid-column: 2/6;
     @include mediumGutterBottom;
   }
 
@@ -32,5 +55,58 @@
     p:last-child {
       padding-left: 20px;
     }
+  }
+}
+
+//footer font styles
+.footer .heading-1 {
+  font-size: 28px;
+  line-height: 28px;
+
+  @include media(mobile-lg) {
+    font-size: 50.79px;
+    line-height: 47.02px;
+  }
+}
+.footer .heading-3 {
+  font-size: 21px;
+  line-height: 21px;
+
+  @include media(mobile-lg) {
+    font-size: 34.7px;
+    line-height: 42.32px;
+  }
+}
+
+.copyright {
+  color: $grey-4;
+  font-family: "AvenirLTStd-Book";
+  font-size: 13px;
+  grid-column: 2/6;
+  padding-bottom: 10px;
+
+  @include media(mobile-lg) {
+    font-size: 20px;
+  }
+
+  @include media(desktop-sm) {
+    font-size: 12px;
+    grid-column: 2/8;
+  }
+}
+
+.footer-navigation {
+  text-transform: uppercase;
+  font-family: "AvenirLTStd-Book";
+  color: $grey-3;
+  font-size: 12px;
+  white-space: nowrap;
+
+  @include media(mobile-lg) {
+    font-size: 18px;
+  }
+
+  @include media(desktop-sm) {
+    font-size: 12px;
   }
 }

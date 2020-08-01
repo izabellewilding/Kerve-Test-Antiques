@@ -19,8 +19,10 @@
     @include media(desktop-sm) {
       grid-column: 5/11;
       max-width: 100%;
+      width: 85%;
     }
   }
+
   &-description {
     grid-column: 2/6;
     @include mediumGutterTop;
@@ -32,19 +34,21 @@
       width: 80%;
     }
     @include media(desktop-sm) {
-      grid-column: 4/12;
+      grid-column: 3/13;
       width: 100%;
     }
   }
+
   &-appreciation {
     grid-column: 1/7;
     display: flex;
     width: 100%;
 
     @include media(desktop-sm) {
-      grid-column: 5/11;
+      grid-column: 4/12;
     }
   }
+
   .product-caption {
     grid-column: 2/6;
 

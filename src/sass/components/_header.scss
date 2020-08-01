@@ -29,7 +29,7 @@
     display: none;
     flex-direction: row;
 
-    @include media(desktop-lg) {
+    @include media(desktop-sm) {
       display: flex;
     }
   }

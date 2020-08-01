@@ -20,6 +20,12 @@
     height: 3px;
     margin: 8px auto;
   }
+
+  @include media(desktop-sm) {
+    width: 33px;
+    height: 2px;
+    margin: 7px auto;
+  }
 }
 
 .hamburger:hover {
