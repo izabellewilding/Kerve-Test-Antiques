@@ -100,6 +100,10 @@
           font-size: 24.47px;
           padding: 29px 50px 29px 50px;
         }
+        @include media(desktop-sm) {
+          font-size: 12.47px;
+          padding: 15px 26px 15px 26px;
+        }
 
         @include media(desktop-lg) {
           margin: initial;
