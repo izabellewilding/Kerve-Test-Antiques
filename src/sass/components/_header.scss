@@ -17,14 +17,11 @@ $header-height-desktop-lg: 80px;
     justify-content: space-between;
     align-items: center;
     height: $header-height-desktop-sm;
-    // padding: 15px 20px;
   }
 
   @include media(desktop-lg) {
     height: $header-height-desktop-lg;
     padding: 0 40px;
-
-    // padding: 15px 153px;
   }
 
   .header-title {
@@ -34,7 +31,6 @@ $header-height-desktop-lg: 80px;
     font-size: 36px;
     display: none;
     white-space: nowrap;
-    // padding: $header-padding;
 
     @include media(desktop-sm) {
       display: block;
@@ -157,6 +153,14 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      color: $highlight;
+      .arrow path {
+        stroke: $highlight;
+      }
+    }
 
     .scaling-svg-container {
       width: 13px;
