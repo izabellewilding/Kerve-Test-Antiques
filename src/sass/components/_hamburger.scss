@@ -1,6 +1,7 @@
 .hamburger {
   display: block;
   z-index: 1;
+  padding: 10px 15px;
 
   @include media(desktop-lg) {
     display: none;
