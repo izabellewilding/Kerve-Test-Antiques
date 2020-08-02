@@ -7,10 +7,10 @@ document
     document.getElementById("hamburger").classList.toggle("is-active");
   });
 
-document.querySelectorAll(".nav-item").forEach((listItem) => {
+document.querySelectorAll(".nav-item").forEach(function (listItem) {
   const navList = document.querySelector(".nav-list");
   console.log("looping", listItem);
-  listItem.onclick = (e) => {
+  listItem.onclick = function (e) {
     console.log("on click");
     navList.classList.remove("mobile-nav-active");
     document.getElementById("hamburger").classList.remove("is-active");
@@ -47,8 +47,8 @@ window.addEventListener("scroll", function (e) {
 
 //arrow navigation
 //Code based on https://jsfiddle.net/donu9wsc/
-document.querySelectorAll(".smooth-scroll").forEach((anchor) => {
-  anchor.onclick = (e) => {
+document.querySelectorAll(".smooth-scroll").forEach(function (anchor) {
+  anchor.onclick = function (e) {
     e.preventDefault();
     const href = anchor.getAttribute("href");
     const target = document.querySelector(href);
@@ -57,13 +57,13 @@ document.querySelectorAll(".smooth-scroll").forEach((anchor) => {
   };
 });
 
-const scrollTo = (element, to, duration) => {
+const scrollTo = function (element, to, duration) {
   let start = element.offsetTop;
   let change = to - start;
   let currentTime = 0;
   let increment = 20;
 
-  const animateScroll = () => {
+  const animateScroll = function () {
     currentTime += increment;
     const val = easeInOutQuad(currentTime, start, change, duration);
     element.scrollTop = val;
@@ -81,7 +81,7 @@ const scrollTo = (element, to, duration) => {
 //b = start value
 //c = change in value
 //d = duration
-const easeInOutQuad = (t, b, c, d) => {
+const easeInOutQuad = function (t, b, c, d) {
   t /= d / 2;
   if (t < 1) return (c / 2) * t * t + b;
   t--;
