@@ -1,5 +1,7 @@
 if (!("scrollBehavior" in document.documentElement.style)) {
-  import("scroll-behavior-polyfill");
+  import("smoothscroll-polyfill").then(function (smoothscroll) {
+    smoothscroll.polyfill();
+  });
 }
 
 //mobile nav toggle

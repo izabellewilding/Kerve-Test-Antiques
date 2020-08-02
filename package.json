@@ -20,11 +20,10 @@
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "^0.0.6",
-    "postcss-modules": "^1.4.1",
-    "scroll-behavior-polyfill": "^2.0.13"
+    "postcss-modules": "^1.4.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.6.3",
-    "scroll-behavior-polyfill": "^2.0.13"
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }
