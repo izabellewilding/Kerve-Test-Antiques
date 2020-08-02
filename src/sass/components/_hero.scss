@@ -95,6 +95,7 @@
 
   @include media(desktop-sm) {
     padding-bottom: 0;
+    margin: initial;
   }
 
   .caption {

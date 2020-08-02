@@ -30,38 +30,11 @@
   // animation: arrow 2s infinite;
   // -webkit-animation: arrow 2s infinite;
 
-  -moz-animation: bounce 3s infinite;
-  -webkit-animation: bounce 3s infinite;
-  animation: bounce 3s infinite;
+  -moz-animation: bounce 5s infinite;
+  -webkit-animation: bounce 5s infinite;
+  animation: bounce 5s infinite;
   @include media(desktop-sm) {
     display: none;
-  }
-}
-
-@keyframes arrow {
-  60%,
-  80%,
-  to {
-    transform: translateY(10px);
-    animation-timing-function: cubic-bezier(0.415, 0.61, 0.655, 1);
-  }
-  70% {
-    transform: translateY(5px);
-  }
-  90% {
-    transform: translateY(-5px);
-  }
-}
-
-@-webkit-keyframes arrow /*Safari and Chrome*/ {
-  0% {
-    transform: translateY(0px);
-  }
-  80% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
   }
 }
 
@@ -70,65 +43,16 @@
   -webkit-animation-delay: -0.5s; /* Safari and Chrome */
 }
 
-$animateTranslateYMax: -20px;
+$animateTranslateYMax: -12px;
 
-@-moz-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY($animateTranslateYMax);
-    transform: translateY($animateTranslateYMax);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@-webkit-keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY($animateTranslateYMax);
-    transform: translateY($animateTranslateYMax);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
 @keyframes bounce {
   0%,
   20%,
   50%,
-  80%,
-  100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
+  60% {
     transform: translateY(0);
   }
-  40% {
-    -moz-transform: translateY($animateTranslateYMax);
-    -ms-transform: translateY($animateTranslateYMax);
-    -webkit-transform: translateY($animateTranslateYMax);
+  35% {
     transform: translateY($animateTranslateYMax);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
   }
 }
