@@ -7,36 +7,40 @@
   overflow: hidden;
 
   @supports (-webkit-touch-callout: none) {
+    @include heroImg;
     position: initial;
-    background-image: url(../assets/images/mobile_hero.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    @include media(desktop-sm) {
-      background-image: url(../assets/images/desktop_hero.jpg);
-      background-size: cover;
-    }
   }
 
   .hero-img {
+    @include heroImg;
+
     height: 100%;
     width: 100%;
     position: absolute;
     z-index: -1;
-    background-image: url(../assets/images/mobile_hero.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     transform: scale(1);
     transition: all 1s;
 
-    @include media(desktop-sm) {
-      background-image: url(../assets/images/desktop_hero.jpg);
-      background-size: cover;
+    @supports (-webkit-touch-callout: none) {
+      display: none;
     }
   }
 
+  .hero .arrow {
+    // animation: arrow 2s infinite;
+    // -webkit-animation: arrow 2s infinite;
+
+    -moz-animation: bounce 5s infinite;
+    -webkit-animation: bounce 5s infinite;
+    animation: bounce 5s infinite;
+    @include media(desktop-sm) {
+      display: none;
+    }
+  }
+
+  .hero .arrow-container {
+    padding: 10px;
+  }
   .hero-zoom {
     transform: scale(1.1);
   }

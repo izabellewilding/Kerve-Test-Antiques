@@ -21,18 +21,6 @@
   top: 0;
 }
 
-.hero .arrow {
-  // animation: arrow 2s infinite;
-  // -webkit-animation: arrow 2s infinite;
-
-  -moz-animation: bounce 5s infinite;
-  -webkit-animation: bounce 5s infinite;
-  animation: bounce 5s infinite;
-  @include media(desktop-sm) {
-    display: none;
-  }
-}
-
 .arrows path.a1 {
   animation-delay: -0.5s;
   -webkit-animation-delay: -0.5s; /* Safari and Chrome */

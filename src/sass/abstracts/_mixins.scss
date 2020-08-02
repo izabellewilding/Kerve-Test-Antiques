@@ -47,6 +47,18 @@
   align-items: center;
 }
 
+@mixin heroImg {
+  background-image: url(../assets/images/mobile_hero.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include media(desktop-sm) {
+    background-image: url(../assets/images/desktop_hero.jpg);
+    background-size: cover;
+  }
+}
+
 @mixin productCaption {
   margin: auto;
   margin-bottom: 0;
