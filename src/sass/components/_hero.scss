@@ -6,9 +6,9 @@
   top: -85px;
   overflow: hidden;
 
-  @supports (-webkit-touch-callout: none) {
-    z-index: -1;
-  }
+  // @supports (-webkit-touch-callout: none) {
+  //   z-index: -1;
+  // }
 
   .hero-img {
     height: 100%;
