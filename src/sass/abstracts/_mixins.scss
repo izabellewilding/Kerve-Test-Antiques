@@ -55,6 +55,8 @@
 
   @include media(desktop-sm) {
     background-image: url(../assets/images/desktop_hero.jpg);
+  }
+  @include media(desktop-lg) {
     background-size: cover;
   }
 }
