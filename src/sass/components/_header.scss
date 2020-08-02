@@ -86,7 +86,7 @@ nav {
       display: flex;
     }
 
-    li {
+    .nav-item {
       padding-right: 15px;
       cursor: pointer;
       transition: color 0.2s;
@@ -174,7 +174,12 @@ nav {
     transition: all 0.15s;
 
     li {
+      cursor: pointer;
+
       padding-bottom: 15px;
+      &:hover {
+        color: $highlight;
+      }
     }
   }
 }
