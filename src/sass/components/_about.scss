@@ -1,3 +1,6 @@
+$largeGutter: 200px;
+$smallGuter: 100px;
+
 .about {
   @include centered;
   @include grid(mobile);
@@ -23,6 +26,10 @@
     @include media(desktop-sm) {
       grid-column: 6/10;
       max-width: 100%;
+    }
+
+    @include media(desktop-lg) {
+      grid-column: 5/11;
     }
   }
 

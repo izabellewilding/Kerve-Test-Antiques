@@ -33,6 +33,10 @@
       column-gap: 30px;
     }
 
+    @include media(desktop-lg) {
+      max-width: 1690px;
+    }
+
     .event-item {
       @include eventItem;
       text-align: center;
@@ -90,6 +94,10 @@
         @include media(desktop-sm) {
           font-size: 24px;
         }
+
+        @include media(desktop-lg) {
+          font-size: 54px;
+        }
       }
       .event-body {
         line-height: 30px;
@@ -121,6 +129,11 @@
             font-size: 13px;
             line-height: 28px;
           }
+          @include media(desktop-lg) {
+            max-width: 100%;
+            font-size: 26px;
+            line-height: 38px;
+          }
         }
       }
 
@@ -131,8 +144,8 @@
         margin: auto;
         width: 60%;
         max-width: 220px;
-
         white-space: nowrap;
+        cursor: pointer;
 
         border: solid 2px $gold;
         color: $gold;
@@ -156,6 +169,8 @@
 
         @include media(desktop-lg) {
           margin: initial;
+          font-size: 14px;
+          padding: 12px 14px 12px 14px;
         }
       }
     }

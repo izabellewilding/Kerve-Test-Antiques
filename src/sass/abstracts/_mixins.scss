@@ -152,9 +152,9 @@
   @include media(mobile-lg) {
     padding-top: 60px;
   }
-  // @include media(desktop-sm) {
-  //   padding-top: 80px;
-  // }
+  @include media(desktop-sm) {
+    padding-top: 80px;
+  }
   @include media(desktop-lg) {
     padding-top: 130px;
   }
@@ -169,9 +169,9 @@
   // @include media(desktop-sm) {
   //   padding-bottom: 80px;
   // }
-  @include media(desktop-lg) {
-    padding-bottom: 130px;
-  }
+  // @include media(desktop-lg) {
+  //   padding-bottom: 130px;
+  // }
 }
 
 @mixin largeGutterTop {
@@ -195,7 +195,7 @@
   @include media(desktop-sm) {
     padding-bottom: 180px;
   }
-  @include media(desktop-lg) {
-    padding-bottom: 200px;
-  }
+  // @include media(desktop-lg) {
+  //   padding-bottom: 200px;
+  // }
 }

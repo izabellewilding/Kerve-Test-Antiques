@@ -1,7 +1,7 @@
 $header-height-mobile: 52px;
 $header-height-mobile-lg: 50px;
 $header-height-desktop-sm: 60px;
-// $header-height-desktop-lg:
+$header-height-desktop-lg: 80px;
 
 .header {
   background-color: $black;
@@ -21,7 +21,8 @@ $header-height-desktop-sm: 60px;
   }
 
   @include media(desktop-lg) {
-    // height: $header-height-desktop-lg;
+    height: $header-height-desktop-lg;
+    padding: 0 40px;
 
     // padding: 15px 153px;
   }
@@ -38,6 +39,10 @@ $header-height-desktop-sm: 60px;
     @include media(desktop-sm) {
       display: block;
       font-size: 20px;
+    }
+
+    @include media(desktop-lg) {
+      font-size: 32px;
     }
   }
 }
@@ -86,6 +91,10 @@ nav {
       cursor: pointer;
       transition: color 0.2s;
       white-space: nowrap;
+
+      @include media(desktop-lg) {
+        padding-right: 25px;
+      }
 
       &:last-child {
         padding-right: 0;
