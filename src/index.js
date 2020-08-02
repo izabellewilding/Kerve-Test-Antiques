@@ -16,8 +16,9 @@ document.querySelectorAll(".nav-item").forEach((listItem) => {
     document.getElementById("hamburger").classList.remove("is-active");
   };
 });
-// event slide in animation
-window.addEventListener("scroll", function (e) {
+
+// event items slide up animation
+function slideAnimation() {
   const eventsEl = document.querySelector(".event-items");
   const position = eventsEl.getBoundingClientRect().top;
 
@@ -25,10 +26,10 @@ window.addEventListener("scroll", function (e) {
   if (position - eventsEl.clientHeight * 2 <= 100) {
     eventsEl.classList.add("inView");
   }
-});
+}
 
-//hero zoom
-window.addEventListener("scroll", function (e) {
+//hero zoom on scroll animation
+function heroZoom() {
   const scrollPosition = window.scrollY;
   const heroImg = document.querySelector(".hero-img");
   if (scrollPosition >= 30) {
@@ -36,6 +37,12 @@ window.addEventListener("scroll", function (e) {
   } else {
     heroImg.classList.remove("hero-zoom");
   }
+}
+
+//call the utility function with each animation on scroll
+window.addEventListener("scroll", function (e) {
+  slideAnimation();
+  heroZoom();
 });
 
 //arrow navigation
