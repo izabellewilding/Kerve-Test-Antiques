@@ -1,10 +1,12 @@
 .footer {
   background-color: $black;
+  position: relative;
+  z-index: 2;
   @include grid(mobile);
-
   @include media(desktop-sm) {
     @include grid(desktop-sm);
   }
+
   &-title {
     grid-column: 2/4;
     max-width: 236px;

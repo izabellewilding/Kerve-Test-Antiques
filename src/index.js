@@ -49,3 +49,19 @@ const easeInOutQuad = (t, b, c, d) => {
   t--;
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
+
+// slide in animation
+window.addEventListener("scroll", function (e) {
+  const eventsEl = document.querySelector(".event-items");
+  const position = eventsEl.getBoundingClientRect().top;
+
+  console.warn("position", position);
+
+  console.warn("client Heigh", eventsEl.clientHeight);
+
+  // console.warn("scroll", scrollPosition);
+  if (position - eventsEl.clientHeight * 2 <= 100) {
+    console.warn("TRIGGERING");
+    eventsEl.classList.add("inView");
+  }
+});

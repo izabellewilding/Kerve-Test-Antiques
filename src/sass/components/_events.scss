@@ -22,9 +22,16 @@
   }
 
   .event-items {
+    z-index: 0;
+
+    transition: 0.75s ease-in-out;
+    &.inView {
+      transform: translateY(0);
+    }
     grid-column: 2/6;
     margin: auto;
     max-width: 1000px;
+    transform: translateY(100%);
 
     @include media(desktop-sm) {
       grid-column: 2/14;
