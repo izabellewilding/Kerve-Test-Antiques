@@ -62,26 +62,22 @@ $smallGuter: 100px;
     }
   }
 
-  .product-caption {
+  .caption {
     grid-column: 2/6;
+    color: $grey-3;
 
     @include productCaption;
-
     @include media(desktop-sm) {
       grid-column: 4/12;
       margin: auto;
       max-width: 63%;
     }
 
-    color: $grey-3;
-
-    .caption {
-      &-number {
-        color: $gold;
-      }
-      &-slash {
-        color: $gold;
-      }
+    &-number {
+      color: $gold;
+    }
+    &-slash {
+      color: $gold;
     }
   }
 }

@@ -48,28 +48,23 @@
 }
 
 @mixin productCaption {
-  @include centered;
   margin: auto;
   margin-bottom: 0;
   margin-top: 0;
   max-width: 300px;
   font-family: "AvenirLTStd-Book";
   font-size: 12px;
-  line-height: 20px;
+  line-height: 12px;
   color: $grey-1;
   margin-top: 17px;
 
-  @include media(desktop-lg) {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
   @include media(mobile-lg) {
-    width: 90%;
   }
   @include media(desktop-lg) {
     max-width: 800px;
     margin: initial;
+    font-size: 24px;
+    line-height: 32px;
   }
 
   &-number {
@@ -88,8 +83,8 @@
 
   &-slash {
     font-family: "Swiss721BT-Thin";
-    font-size: 27px;
-    padding: 10px;
+    font-size: 23px;
+    padding: 4px;
     font-weight: bold;
 
     @include media(desktop-lg) {
