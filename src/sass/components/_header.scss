@@ -67,23 +67,28 @@ nav {
       text-align: center;
       flex-direction: column;
       position: fixed;
+      justify-content: space-evenly;
+
       background-color: $black;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
+
       transform: translateX(100%);
       transition: transform 0.5s;
-      justify-content: space-evenly;
+
       height: 100%;
       z-index: 20;
+      padding-top: 20%;
+      padding-bottom: 20%;
+      font-size: 32px;
     }
 
     @include media(desktop-sm) {
       display: flex;
     }
     a {
-      padding-right: 15px;
       @include media(desktop-lg) {
         padding-right: 25px;
       }
