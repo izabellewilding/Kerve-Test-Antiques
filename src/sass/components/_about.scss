@@ -26,12 +26,12 @@ $smallGuter: 100px;
     // }
 
     @include media(desktop-sm) {
-      grid-column: 6/10;
-      max-width: 100%;
+      grid-column: 5/11;
+      max-width: 386px;
     }
 
     @include media(desktop-lg) {
-      grid-column: 5/11;
+      max-width: 700px;
     }
   }
 

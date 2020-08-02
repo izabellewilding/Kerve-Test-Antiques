@@ -47,18 +47,23 @@
   align-items: center;
 }
 
-@mixin justify {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 @mixin productCaption {
   @include centered;
   margin: auto;
   margin-bottom: 0;
   margin-top: 0;
+  max-width: 300px;
+  font-family: "AvenirLTStd-Book";
+  font-size: 12px;
+  line-height: 20px;
+  color: $grey-1;
+  margin-top: 17px;
 
-  max-width: 500px;
+  @include media(desktop-lg) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
   @include media(mobile-lg) {
     width: 90%;
   }
@@ -67,40 +72,28 @@
     margin: initial;
   }
 
-  .caption {
+  &-number {
+    @include centered;
     font-family: "AvenirLTStd-Book";
     font-size: 12px;
-    line-height: 20px;
-    color: $grey-1;
-    margin-top: 17px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    display: inline-block;
 
     @include media(desktop-lg) {
       font-size: 24px;
-      line-height: 32px;
     }
+  }
 
-    &-number {
-      @include centered;
-      font-family: "AvenirLTStd-Book";
-      font-size: 12px;
-      padding: 10px;
-      letter-spacing: 2px;
-      font-weight: bold;
+  &-slash {
+    font-family: "Swiss721BT-Thin";
+    font-size: 27px;
+    padding: 10px;
+    font-weight: bold;
 
-      @include media(desktop-lg) {
-        font-size: 24px;
-      }
-    }
-
-    &-slash {
-      font-family: "Swiss721BT-Thin";
-      font-size: 27px;
-      padding: 10px;
-      font-weight: bold;
-
-      @include media(desktop-lg) {
-        font-size: 40px;
-      }
+    @include media(desktop-lg) {
+      font-size: 40px;
     }
   }
 }
@@ -127,7 +120,6 @@
   }
 }
 
-//will return to fix the hero desktop-lg line
 @mixin heroThemeLine {
   @include themeLine;
   border-bottom: 0.5px solid $white;
@@ -168,12 +160,6 @@
   @include media(mobile-lg) {
     padding-bottom: 60px;
   }
-  // @include media(desktop-sm) {
-  //   padding-bottom: 80px;
-  // }
-  // @include media(desktop-lg) {
-  //   padding-bottom: 130px;
-  // }
 }
 
 @mixin largeGutterTop {
@@ -197,7 +183,4 @@
   @include media(desktop-sm) {
     padding-bottom: 180px;
   }
-  // @include media(desktop-lg) {
-  //   padding-bottom: 200px;
-  // }
 }
