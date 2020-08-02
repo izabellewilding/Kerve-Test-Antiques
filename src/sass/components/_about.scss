@@ -70,7 +70,6 @@ $smallGuter: 100px;
     @include media(desktop-sm) {
       grid-column: 4/12;
       margin: auto;
-      max-width: 63%;
     }
 
     &-number {

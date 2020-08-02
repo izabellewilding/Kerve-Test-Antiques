@@ -18,18 +18,18 @@
     width: 100%;
     position: absolute;
     z-index: -1;
-    transform: scale(1);
-    transition: all 1s;
+    transform: scale(01);
+    transition: transform 1s;
 
+    @include media(mobile-lg) {
+      transform: scale(0.8);
+    }
     @supports (-webkit-touch-callout: none) {
       display: none;
     }
   }
 
   .arrow {
-    // animation: arrow 2s infinite;
-    // -webkit-animation: arrow 2s infinite;
-
     -moz-animation: bounce 5s infinite;
     -webkit-animation: bounce 5s infinite;
     animation: bounce 5s infinite;

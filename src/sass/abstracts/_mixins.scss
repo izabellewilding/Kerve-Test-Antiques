@@ -63,13 +63,19 @@
   margin: auto;
   margin-bottom: 0;
   margin-top: 0;
-  max-width: 300px;
+  max-width: 250px;
   font-family: "AvenirLTStd-Book";
   font-size: 12px;
+  line-height: 9px;
   color: $grey-1;
   margin-top: 17px;
+  text-align: end;
 
   @include media(mobile-lg) {
+    max-width: 300px;
+    line-height: 16px;
+
+    text-align: center;
   }
   @include media(desktop-lg) {
     max-width: 800px;
