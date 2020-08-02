@@ -9,7 +9,7 @@ $header-height-desktop-lg: 80px;
   justify-content: flex-end;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 30;
   height: $header-height-mobile;
   padding: 0 15px;
 
@@ -80,10 +80,17 @@ nav {
       transition: transform 0.5s;
       justify-content: space-evenly;
       height: 100%;
+      z-index: 20;
     }
 
     @include media(desktop-sm) {
       display: flex;
+    }
+    a {
+      padding-right: 15px;
+      @include media(desktop-lg) {
+        padding-right: 25px;
+      }
     }
 
     .nav-item {

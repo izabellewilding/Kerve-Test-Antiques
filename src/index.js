@@ -7,6 +7,26 @@ document
     document.getElementById("hamburger").classList.toggle("is-active");
   });
 
+document.querySelectorAll(".nav-item").forEach((listItem) => {
+  const navList = document.querySelector(".nav-list");
+  console.log("looping", listItem);
+  listItem.onclick = (e) => {
+    console.log("on click");
+    navList.classList.remove("mobile-nav-active");
+    document.getElementById("hamburger").classList.remove("is-active");
+  };
+});
+// event slide in animation
+window.addEventListener("scroll", function (e) {
+  const eventsEl = document.querySelector(".event-items");
+  const position = eventsEl.getBoundingClientRect().top;
+
+  // console.warn("scroll", scrollPosition);
+  if (position - eventsEl.clientHeight * 2 <= 100) {
+    eventsEl.classList.add("inView");
+  }
+});
+
 //arrow navigation
 //Code based on https://jsfiddle.net/donu9wsc/
 document.querySelectorAll(".smooth-scroll").forEach((anchor) => {
@@ -49,19 +69,3 @@ const easeInOutQuad = (t, b, c, d) => {
   t--;
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
-
-// slide in animation
-window.addEventListener("scroll", function (e) {
-  const eventsEl = document.querySelector(".event-items");
-  const position = eventsEl.getBoundingClientRect().top;
-
-  console.warn("position", position);
-
-  console.warn("client Heigh", eventsEl.clientHeight);
-
-  // console.warn("scroll", scrollPosition);
-  if (position - eventsEl.clientHeight * 2 <= 100) {
-    console.warn("TRIGGERING");
-    eventsEl.classList.add("inView");
-  }
-});
