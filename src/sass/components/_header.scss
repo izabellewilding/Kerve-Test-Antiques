@@ -44,8 +44,22 @@ nav {
     justify-content: flex-end;
   }
   .nav-list {
-    display: none;
+    // display: none;
     flex-direction: row;
+
+    @include media(mobile) {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      position: fixed;
+      background-color: black;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transform: translateX(-100%);
+      transition: all 0.5s;
+    }
 
     @include media(desktop-sm) {
       display: flex;
@@ -58,6 +72,13 @@ nav {
       }
     }
   }
+
+  .mobile-nav-active {
+    transform: translateX(0);
+  }
+}
+
+@include media(mobile) {
 }
 
 .sub-nav-item {
