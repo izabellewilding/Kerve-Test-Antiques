@@ -7,7 +7,7 @@
   overflow: hidden;
 
   @supports (-webkit-touch-callout: none) {
-    position: relative;
+    z-index: -1;
   }
 
   .hero-img {
@@ -109,6 +109,10 @@
 
     .arrow {
       width: 40px;
+
+      @supports (-webkit-touch-callout: none) {
+        display: none;
+      }
     }
   }
 }
