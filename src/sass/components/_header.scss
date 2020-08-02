@@ -47,18 +47,20 @@ nav {
     // display: none;
     flex-direction: row;
 
-    @include media(mobile) {
+    @media (max-width: 900px) {
       display: flex;
       text-align: center;
       flex-direction: column;
       position: fixed;
-      background-color: black;
+      background-color: $black;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      transform: translateX(-100%);
+      transform: translateX(100%);
       transition: all 0.5s;
+      justify-content: space-evenly;
+      height: 100%;
     }
 
     @include media(desktop-sm) {
@@ -67,8 +69,14 @@ nav {
 
     li {
       padding-right: 15px;
+      cursor: pointer;
+      transition: color 0.2s;
       &:last-child {
         padding-right: 0;
+      }
+
+      &:hover {
+        color: $highlight;
       }
     }
   }

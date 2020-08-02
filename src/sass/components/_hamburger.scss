@@ -1,5 +1,6 @@
 .hamburger {
   display: block;
+  z-index: 1;
 
   @include media(desktop-lg) {
     display: none;
@@ -8,18 +9,14 @@
 .hamburger .line {
   width: 30px;
   height: 2px;
+  margin: 7px auto;
   background-color: $gold;
   display: block;
-  margin: 7px auto;
+
+  // margin: 7px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-
-  @include media(mobile-lg) {
-    width: 33px;
-    height: 2px;
-    margin: 7px auto;
-  }
 
   @include media(desktop-sm) {
     display: none;
@@ -28,6 +25,9 @@
 
 .hamburger:hover {
   cursor: pointer;
+  .line {
+    background-color: $highlight;
+  }
 }
 
 .hamburger.is-active .line:nth-child(2) {
@@ -35,15 +35,15 @@
 }
 
 .hamburger.is-active .line:nth-child(1) {
-  -webkit-transform: translateY(13px) rotate(45deg);
-  -ms-transform: translateY(13px) rotate(45deg);
-  -o-transform: translateY(13px) rotate(45deg);
-  transform: translateY(13px) rotate(45deg);
+  -webkit-transform: translateY(9px) rotate(40deg);
+  -ms-transform: translateY(9px) rotate(40deg);
+  -o-transform: translateY(9px) rotate(40deg);
+  transform: translateY(9px) rotate(40deg);
 }
 
 .hamburger.is-active .line:nth-child(3) {
-  -webkit-transform: translateY(-13px) rotate(-45deg);
-  -ms-transform: translateY(-13px) rotate(-45deg);
-  -o-transform: translateY(-13px) rotate(-45deg);
-  transform: translateY(-13px) rotate(-45deg);
+  -webkit-transform: translateY(-9px) rotate(-40deg);
+  -ms-transform: translateY(-9px) rotate(-40deg);
+  -o-transform: translateY(-9px) rotate(-40deg);
+  transform: translateY(-9px) rotate(-40deg);
 }

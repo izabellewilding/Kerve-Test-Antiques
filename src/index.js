@@ -4,4 +4,7 @@ document
   .addEventListener("click", function (event) {
     const navList = document.querySelector(".nav-list");
     navList.classList.toggle("mobile-nav-active");
+    document.getElementById("hamburger").classList.toggle("is-active");
   });
+
+//hamburger animation
