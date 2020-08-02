@@ -23,6 +23,8 @@
 
   .event-items {
     grid-column: 2/6;
+    margin: auto;
+    max-width: 850px;
 
     @include media(desktop-sm) {
       grid-column: 2/14;
@@ -39,7 +41,6 @@
 
       @include media(desktop-sm) {
         text-align: start;
-        max-width: 278px;
       }
 
       &.item-1 {
@@ -73,7 +74,7 @@
           font-size: 26px;
         }
         @include media(desktop-lg) {
-          font-size: 96px;
+          font-size: 65px;
         }
       }
       .event-title {

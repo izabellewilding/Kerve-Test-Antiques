@@ -16,10 +16,13 @@
     @include mediumGutterBottom;
     position: relative;
 
+    // @include media(mobile-lg) {
+    //   grid-column: 3/4;
+    // }
+
     @include media(desktop-sm) {
-      grid-column: 5/11;
+      grid-column: 6/10;
       max-width: 100%;
-      width: 85%;
     }
   }
 
@@ -34,8 +37,9 @@
       width: 80%;
     }
     @include media(desktop-sm) {
-      grid-column: 3/13;
+      grid-column: 4/12;
       width: 100%;
+      line-height: 32px;
     }
   }
 

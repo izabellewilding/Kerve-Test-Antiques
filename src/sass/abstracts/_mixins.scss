@@ -5,7 +5,7 @@
     }
   }
   @if $breakpoint==mobile-lg {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 480px) {
       @content;
     }
   }
