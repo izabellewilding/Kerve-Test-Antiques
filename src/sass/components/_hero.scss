@@ -1,11 +1,31 @@
 .hero {
-  background-image: url(../assets/images/mobile_hero.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   background-color: #95a2a8;
   height: 100vh;
   flex-direction: column;
+  position: sticky;
+  top: -85px;
+
+  .hero-img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url(../assets/images/mobile_hero.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: all 1s;
+
+    @include media(desktop-sm) {
+      background-image: url(../assets/images/desktop_hero.jpg);
+      background-size: cover;
+    }
+  }
+
+  .hero-zoom {
+    transform: scale(1.2);
+  }
 
   @include centered;
   @include grid(mobile);
@@ -16,8 +36,7 @@
 
   @include media(desktop-sm) {
     @include grid(desktop-sm);
-    background-image: url(../assets/images/desktop_hero.jpg);
-    background-size: cover;
+
     grid-template-rows: 1.5fr 1fr;
   }
 

@@ -1,9 +1,10 @@
 .events {
   background-color: $white;
+  position: relative;
+
   @include largeGutterTop;
   @include largeGutterBottom;
   @include grid(mobile);
-
   @include media(desktop-sm) {
     @include grid(desktop-sm);
   }

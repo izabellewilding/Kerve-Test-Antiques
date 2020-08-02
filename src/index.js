@@ -27,6 +27,17 @@ window.addEventListener("scroll", function (e) {
   }
 });
 
+//hero zoom
+window.addEventListener("scroll", function (e) {
+  const scrollPosition = window.scrollY;
+  const heroImg = document.querySelector(".hero-img");
+  if (scrollPosition >= 30) {
+    heroImg.classList.add("hero-zoom");
+  } else {
+    heroImg.classList.remove("hero-zoom");
+  }
+});
+
 //arrow navigation
 //Code based on https://jsfiddle.net/donu9wsc/
 document.querySelectorAll(".smooth-scroll").forEach((anchor) => {

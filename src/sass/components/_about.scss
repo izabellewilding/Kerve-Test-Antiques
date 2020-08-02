@@ -9,6 +9,8 @@ $smallGuter: 100px;
     @include grid(desktop-sm);
   }
 
+  position: relative;
+
   background-color: $white;
   &-title {
     grid-column: 2/6;
