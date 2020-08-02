@@ -3,9 +3,12 @@
   height: 100vh;
   flex-direction: column;
   position: sticky;
-  position: -webkit-sticky; /* Safari */
   top: -85px;
   overflow: hidden;
+
+  @supports (-webkit-touch-callout: none) {
+    position: relative;
+  }
 
   .hero-img {
     height: 100%;
