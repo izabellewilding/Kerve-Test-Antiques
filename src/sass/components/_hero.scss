@@ -26,7 +26,7 @@
     }
   }
 
-  .hero .arrow {
+  .arrow {
     // animation: arrow 2s infinite;
     // -webkit-animation: arrow 2s infinite;
 
@@ -149,5 +149,47 @@
   }
   &-slash {
     color: $white;
+  }
+}
+
+.animate-left {
+  animation-name: moveInLeft;
+  animation-duration: 1.6s;
+}
+.animate-right {
+  animation-name: moveInRight;
+  animation-duration: 1.5s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(20px);
+    transform: skew(15deg, 0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+    transform: skew(15deg, 0deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
   }
 }

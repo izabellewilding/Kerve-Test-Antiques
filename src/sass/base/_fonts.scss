@@ -43,6 +43,11 @@
     font-size: 51.56px;
     line-height: 51.56px;
   }
+
+  @include media(desktop-lg) {
+    font-size: 96.56px;
+    line-height: 91.56px;
+  }
 }
 .heading-4 {
   font-family: "PalatinoLT-Roman";

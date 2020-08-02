@@ -1,3 +1,7 @@
+if (!("scrollBehavior" in document.documentElement.style)) {
+  import("scroll-behavior-polyfill");
+}
+
 //mobile nav toggle
 document
   .getElementById("hamburger")
@@ -46,44 +50,19 @@ window.addEventListener("scroll", function (e) {
 });
 
 //arrow navigation
-//Code based on https://jsfiddle.net/donu9wsc/
 document.querySelectorAll(".smooth-scroll").forEach(function (anchor) {
   anchor.onclick = function (e) {
     e.preventDefault();
     const href = anchor.getAttribute("href");
     const target = document.querySelector(href);
-    const to = target.offsetTop;
-    scrollTo(document.documentElement, to, 1000);
+    target.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   };
 });
 
-const scrollTo = function (element, to, duration) {
-  let start = element.offsetTop;
-  let change = to - start;
-  let currentTime = 0;
-  let increment = 20;
-
-  const animateScroll = function () {
-    currentTime += increment;
-    const val = easeInOutQuad(currentTime, start, change, duration);
-    element.scrollTop = val;
-    if (currentTime < duration) {
-      setTimeout(animateScroll, increment);
-    }
-  };
-
-  animateScroll();
-};
-
-// Easing function -> easeInOutQuad
-//
-//t = current time
-//b = start value
-//c = change in value
-//d = duration
-const easeInOutQuad = function (t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return (c / 2) * t * t + b;
-  t--;
-  return (-c / 2) * (t * (t - 2) - 1) + b;
-};
+// window.onload = function () {
+//   document.querySelector("title");
+// };
