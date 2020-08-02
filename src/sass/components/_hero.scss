@@ -66,14 +66,20 @@
 
     .hero-title {
       padding-top: 29px;
+      width: 100%;
 
       @include media(desktop-sm) {
         padding-bottom: 30px;
         position: relative;
-        @include heroThemeLine;
+
+        &:after {
+          @include themeLine;
+          border-bottom: 0.5px solid $white;
+          right: 0;
+          margin: initial;
+        }
       }
     }
-
     @include media(desktop-sm) {
       grid-column: 9/14;
       justify-content: flex-end;
@@ -154,11 +160,13 @@
 
 .animate-left {
   animation-name: moveInLeft;
-  animation-duration: 1.6s;
+  animation-duration: 2s;
 }
 .animate-right {
+  animation-delay: 0.8s;
+
   animation-name: moveInRight;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 
 @keyframes moveInLeft {
@@ -169,7 +177,6 @@
 
   80% {
     transform: translateX(20px);
-    transform: skew(15deg, 0deg);
   }
   100% {
     opacity: 1;
@@ -185,11 +192,65 @@
 
   80% {
     transform: translateX(-20px);
-    transform: skew(15deg, 0deg);
   }
 
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@keyframes moveInLastLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+//drop in
+
+.animate span {
+  display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+  animation-delay: 0.05s;
+}
+.animate span:nth-of-type(3) {
+  animation-delay: 0.1s;
+}
+.animate span:nth-of-type(4) {
+  animation-delay: 0.15s;
+}
+
+/* Animation Four */
+
+.four span {
+  opacity: 0;
+  transform: translate(0, -100px) rotate(360deg) scale(0);
+  animation: revolveDrop2 0.3s forwards;
+}
+
+@keyframes revolveDrop2 {
+  30% {
+    transform: translate(0, -50px) rotate(180deg) scale(1);
+  }
+
+  60% {
+    transform: translate(0, 20px) scale(0.8) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0) scale(1) rotate(0deg);
+    opacity: 1;
   }
 }

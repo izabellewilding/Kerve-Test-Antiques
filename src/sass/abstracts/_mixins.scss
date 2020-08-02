@@ -105,31 +105,18 @@
 }
 
 @mixin themeLine {
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0.3px;
-    border-bottom: 0.5px solid #9884686e;
-    width: 25%;
-    margin: auto;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.3px;
+  width: 25%;
+  margin: auto;
 
-    @include media(mobile-lg) {
-      width: 20%;
-    }
-
-    @include media(desktop-lg) {
-      width: 15%;
-    }
+  @include media(desktop-lg) {
+    width: 15%;
   }
-}
-
-@mixin heroThemeLine {
-  @include themeLine;
-  border-bottom: 0.5px solid $white;
-  width: 20%;
 }
 
 @mixin eventItem {
