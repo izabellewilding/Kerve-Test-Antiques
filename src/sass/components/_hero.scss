@@ -7,7 +7,16 @@
   overflow: hidden;
 
   @supports (-webkit-touch-callout: none) {
-    z-index: -1;
+    position: initial;
+    background-image: url(../assets/images/mobile_hero.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include media(desktop-sm) {
+      background-image: url(../assets/images/desktop_hero.jpg);
+      background-size: cover;
+    }
   }
 
   .hero-img {
@@ -114,10 +123,6 @@
 
     .arrow {
       width: 40px;
-
-      @supports (-webkit-touch-callout: none) {
-        display: none;
-      }
     }
   }
 }
