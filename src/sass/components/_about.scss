@@ -21,10 +21,6 @@ $smallGuter: 100px;
     @include mediumGutterBottom;
     position: relative;
 
-    // @include media(mobile-lg) {
-    //   grid-column: 3/4;
-    // }
-
     @include media(desktop-sm) {
       grid-column: 5/11;
       max-width: 386px;

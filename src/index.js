@@ -5,7 +5,7 @@ if (!("scrollBehavior" in document.documentElement.style)) {
   });
 }
 
-//mobile nav toggle
+//mobile navigation toggle
 document
   .getElementById("hamburger")
   .addEventListener("click", function (event) {
@@ -14,11 +14,10 @@ document
     document.getElementById("hamburger").classList.toggle("is-active");
   });
 
+//function to close the mobile nav on click and toggle menu icon
 document.querySelectorAll(".nav-item").forEach(function (listItem) {
   const navList = document.querySelector(".nav-list");
-  console.log("looping", listItem);
   listItem.onclick = function (e) {
-    console.log("on click");
     navList.classList.remove("mobile-nav-active");
     document.getElementById("hamburger").classList.remove("is-active");
   };
@@ -52,7 +51,7 @@ window.addEventListener("scroll", function (e) {
   heroZoom();
 });
 
-//arrow navigation
+//smooth scroll navigation
 document.querySelectorAll(".smooth-scroll").forEach(function (anchor) {
   anchor.onclick = function (e) {
     e.preventDefault();
