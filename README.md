@@ -1,12 +1,9 @@
-# The Antique Society - A Tech test for Kerve
+# The Antique Society - A Tech Test for Kerve
 
 ## A fully responsive website built with plain HTML, CSS/SASS, and vanilla JavaScript as a tech test for Kerve. 
 
 
-![Site Screenshot LG](src/assets/readme/SITE-DESKTOP-LG.JPG)
-
-## IOS Preview 
-![Site screenshot phone](src/assets/readme/DESKTOP_ANIMATION.gif)
+![Desktop Animation Preview](src/assets/readme/DESKTOP_ANIMATION.gif)
 
 ## The Brief
 
@@ -22,13 +19,12 @@
 
 ### Adaptations to the design
 
-- Parallax effect disabled on IOS only due to z-index behaving differently
-- Navigation items did not fit a small desktop/large iPad so I added a subnavigation dropdown menu that animated with CSS transform
+- Navigation items overlapped on small desktop/large iPad so I have added a subnavigation dropdown menu which animates with CSS transform and hover effects 
 
 ![Dropdown](src/assets/readme/DROP_DOWN_MENU_DESKTOP.gif)
 
 
-## CSS Keyframe/transform and JavaScript Animations 
+## CSS and JavaScript Animations 
 
 ### Navigation Smooth-Scroll and Hover effects 
 - Click on 'Events' or 'About us' to navigate smoothly to each section
@@ -36,7 +32,6 @@
 - Hover highlight effect and drop down sub-navigation
 
 ![Mobile nav](src/assets/readme/EVENT_ITEMS_ANIMATE_IN_ON_SCROLL.gif)
-
 
 ### Hero Animations
 - Hero parallax effect 
@@ -48,13 +43,13 @@
 ![Chair Resizing](src/assets/readme/CHAIR_RESIZING.gif)
 
 ### Event section animations
-- Event items animate in smoothly on scroll 
+- Event items animate in smoothly on scroll using JavaScript scroll event
 - Button hover CSS effect
 ![Event anmation](src/assets/readme/DESKTOP_ANIMATION.gif)
 
 
 ## Performance 
-### Above 90 for performance, SEO, and Accessiblity 
+### Above 90 for performance, SEO, Best Practices, and Accessiblity 
 
 - Ran images through image compression to improve page load speed
 - With more time I would add aria-labels and test on screen reader 
@@ -62,13 +57,15 @@
 ![Lighthouse Score](src/assets/readme/LIGHTHOUSE_SCREENSHOT.png)
 
 ## Cross-browser Compatability 
-- Tested and works consistently on Edge, Chrome, and Sarafi
+- Tested and works consistently on Edge, Chrome, and Safari
 - Fixed smooth scroll bug on IOS by adding smooth scroll polyfill 
 
 ## TODO
 
 - Add aria-labels for higher accessibility score and test on screen reader 
 - Add a lazy load component for images 
+- Parallax effect disabled on IOS only due to z-index behaving differently with other animations: Would try and find a solution to make this work
+
 
 
 
