@@ -1,17 +1,13 @@
-# The Antique Society - A Tech test for Kerve
+# The Antique Society - A Tech Test for Kerve
 
-![Site Screenshot LG](src/assets/readme/SITE-DESKTOP-LG.JPG)
-
-## iOS example video
-
-![Watch the video](https://img.youtube.com/vi/euDac7qTe84/0.jpg)](https://youtu.be/euDac7qTe84)
+## A fully responsive animated website built with plain HTML, CSS/SASS, and vanilla JavaScript. 
 
 
-This is a fully responsive website built with plain HTML, CSS/SASS, and vanilla JavaScript as a tech test for Kerve. 
+![Desktop Animation Preview](src/assets/readme/DESKTOP_ANIMATION.gif)
 
 ## The Brief
 
-- Build a website that matched the designs provided for mobile and desktop
+- Build a website to match the mobile and desktop Photoshop designs provided
 - Use flat HTML, CSS/SASS and JavaScript
 - Make it work on all screen sizes
 - Add CSS/JS animations 
@@ -19,50 +15,57 @@ This is a fully responsive website built with plain HTML, CSS/SASS, and vanilla 
 ## Responsive Design 
 
 - Responsive to 4 key brekpoints covering screens from small mobile to large screen
-- Concise media query breakpoints with sass mixins
+- Use of SASS mixins for responsive design 
 
 ### Adaptations to the design
-- Navigation items did not fit a small desktop/large iPad so I added a subnavigation dropdown menu that animated with CSS transform
+
+- Navigation items overlapped on small desktop/large iPad so I have added a subnavigation dropdown menu which animates with CSS transform and hover effects 
+
+![Dropdown](src/assets/readme/DROP_DOWN_MENU_DESKTOP.gif)
 
 
 ## CSS and JavaScript Animations 
 
-- Hero image parallax effect 
-- Text hover highlight navigation items 
-- Button hover effect on event items 
+### Navigation Smooth-Scroll and Hover effects 
+- Click on 'Events' or 'About us' to navigate smoothly to each section
+- Animated hamburger SVG and navigation drawer 
+- Hover highlight effect and drop down sub-navigation
 
+![Mobile nav](src/assets/readme/EVENT_ITEMS_ANIMATE_IN_ON_SCROLL.gif)
 
-### CSS Keyframe animations
-- Small white down arrow on mobile moves up and down every few seconds
-- Hero letter drop-in animation 
-- Hero title opacity fade in 
+### Hero Animations
+- Hero parallax effect 
+- Uses JavaScript to resize the hero image on scroll
+- CSS Keyframe animation for drop-in effect on letters
+- Main title opacity fades in
+- Mobile arrow animates incrementally and navigates smoothly to next section on click
 
+![Chair Resizing](src/assets/readme/CHAIR_RESIZING.gif)
 
-### JavaScript Scroll & onClick Events
-- Click down arrow on mobile to navigate smoothly to next section
-- Event card items fly in from the bottom on scroll 
-- Hero image zooms on scroll 
-
-![Site Animation GIF Large Desktop](src/assets/readme/DESKTOP_ANIMATION.gif)
-![Site Animation GIF mobile](src/assets/readme/RPReplay-Final1596409584.MP4)
-
-## Cross-browser Compatability 
-- Tested and works consistently on Edge, Chrome, and Sarafi
-- Fixed smooth scroll bug on IOS by adding smooth scroll polyfill 
-
-
-
-
-
+### Event section animations
+- Event items animate in smoothly on scroll using JavaScript scroll event
+- Button hover CSS effect
+![Event anmation](src/assets/readme/DESKTOP_ANIMATION.gif)
 
 
 ## Performance 
-### Excellent performance, SEO, and Accessiblity 
+### Above 90 for performance, SEO, Best Practices, and Accessiblity 
 
 - Ran images through image compression to improve page load speed
 - With more time I would add aria-labels and test on screen reader 
 
 ![Lighthouse Score](src/assets/readme/LIGHTHOUSE_SCREENSHOT.png)
+
+## Cross-browser Compatability 
+- Tested and works consistently on Edge, Chrome, and Safari
+- Fixed smooth scroll bug on IOS by adding smooth scroll polyfill 
+
+## With more time I would...
+
+- Add aria-labels for higher accessibility score and test on screen reader 
+- Add a lazy load component for images 
+- Parallax effect disabled on IOS only due to z-index behaving differently with other animations: Would try and find a solution to make this work
+
 
 
 
