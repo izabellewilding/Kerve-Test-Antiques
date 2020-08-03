@@ -1,6 +1,6 @@
 # The Antique Society - A Tech Test for Kerve
 
-## A fully responsive website built with plain HTML, CSS/SASS, and vanilla JavaScript as a tech test for Kerve. 
+## A fully responsive animated website built with plain HTML, CSS/SASS, and vanilla JavaScript. 
 
 
 ![Desktop Animation Preview](src/assets/readme/DESKTOP_ANIMATION.gif)
