@@ -1,3 +1,4 @@
+//smooth scroll polyfill to make scroll work on IOS
 if (!("scrollBehavior" in document.documentElement.style)) {
   import("smoothscroll-polyfill").then(function (smoothscroll) {
     smoothscroll.polyfill();
@@ -64,7 +65,3 @@ document.querySelectorAll(".smooth-scroll").forEach(function (anchor) {
     });
   };
 });
-
-// window.onload = function () {
-//   document.querySelector("title");
-// };
