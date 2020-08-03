@@ -60,7 +60,7 @@
 - Tested and works consistently on Edge, Chrome, and Safari
 - Fixed smooth scroll bug on IOS by adding smooth scroll polyfill 
 
-## TODO
+## With more time I would...
 
 - Add aria-labels for higher accessibility score and test on screen reader 
 - Add a lazy load component for images 
